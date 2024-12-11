@@ -1,0 +1,32 @@
+@import './halamanutama/sidebar.css';
+@import './halamanutama/header.css';
+@import './halamanutama/beranda-section.css';
+@import './halamanutama/detail-section.css';
+@import './halamanutama/history-section.css';
+@import './halamanutama/koleksi-section.css';
+@import './halamanutama/podcast-episodes.css';
+@import './halamanutama/footer.css';
+ 
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+  }
+  
+.main-content {
+    margin-left: 250px; 
+    flex: 100;
+    display: flex;
+    flex-direction: column;
+  }
+
+  

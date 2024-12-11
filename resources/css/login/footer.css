@@ -1,0 +1,12 @@
+.signup-link {
+    font-size: 0.9rem;
+    margin-top: 1rem;
+}
+
+.signup-link a {
+    color: #197200;
+    text-decoration: none;
+}
+.signup-link a:hover {
+    color: #ffffff;
+}
