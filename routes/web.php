@@ -1,9 +1,23 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
-use Illuminate\Http\Request;
 
-// Menggunakan middleware 'web' untuk semua route di dalam grup ini
+use Illuminate\Http\Request;
+use Illuminate\Foundation\Auth\User;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Route;
+use Laravel\Socialite\Facades\Socialite;
+use App\Http\Controllers\Auth\SociaLiteController;
+
+
+
+
+// Redirect ke penyedia autentikasi
+Route::get('auth/redirect', [SociaLiteController::class, 'redirect'])->name('auth.redirect');
+
+// Callback setelah login berhasil
+Route::get('auth/google/callback', [SociaLiteController::class, 'callback'])->name('auth.callback');
+
+// Middleware untuk rute dengan web
 Route::middleware('web')->group(function () {
     // Rute untuk login
     Route::get('/login', function () {
@@ -16,20 +30,19 @@ Route::middleware('web')->group(function () {
     })->name('signup');
 
     // Rute untuk signup (POST)
-    Route::post('/signup', function (Request $request) {
-        // Validasi data input
+    Route::post('/signup', function (\Illuminate\Http\Request $request) {
         $validated = $request->validate([
             'name' => 'required|string|max:255',
             'email' => 'required|email|unique:users,email',
             'password' => 'required|min:6|confirmed',
         ]);
 
-        // Logika untuk menyimpan data pengguna (gunakan model User jika ada)
-        // User::create([
-        //     'name' => $validated['name'],
-        //     'email' => $validated['email'],
-        //     'password' => bcrypt($validated['password']),
-        // ]);
+        // Simpan data pengguna ke database
+        \App\Models\User::create([
+            'name' => $validated['name'],
+            'email' => $validated['email'],
+            'password' => bcrypt($validated['password']),
+        ]);
 
         // Redirect ke halaman genre dengan pesan sukses
         return redirect()->route('genre')->with('success', 'Account created successfully!');
@@ -40,13 +53,12 @@ Route::middleware('web')->group(function () {
         return view('genre');
     })->name('genre');
 
-        // Rute untuk halaman utama
-        Route::get('/halamanutama', function () {
-            return view('halamanutama');
-        })->name('halamanutama');
-        
+    // Rute untuk halaman utama
+    Route::get('/halamanutama', function () {
+        return view('halamanutama');
+    })->name('halamanutama');
 
-    // Rute untuk menangani semua permintaan (SPA)
+    // SPA fallback route
     Route::get('/{any}', function () {
         return view('home');
     })->where('any', '.*');

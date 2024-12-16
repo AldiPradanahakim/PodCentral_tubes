@@ -7,6 +7,7 @@
     <input type="password" id="password1" name="password" placeholder="password...">
 
     <a href="#" class="alternative-login">Use phone number instead.</a>
+    
+      <button  type="submit" class="login-button">Login</button>
 
-    <button type="submit" class="login-button">Login</button>
 </form>

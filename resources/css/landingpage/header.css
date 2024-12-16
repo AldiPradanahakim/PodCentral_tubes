@@ -3,12 +3,12 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
-    color:#A4A4A4 ;
-    z-index: 10; 
+    color: #a4a4a4;
+    z-index: 10;
     position: absolute;
     top: 0;
     left: 0;
-    width: 1640px;
+    /* width: 1640px; */
 }
 
 header h1 {
@@ -21,9 +21,9 @@ header h1 {
     text-decoration: none;
     padding: 5px 10px;
     border: 1px solid #fff;
-    border-radius: 10px;
+    border-radius: 20px;
     transition: background-color 0.3s, color 0.3s;
-    background-color: #A4A4A4;
+    background-color: #fff7f7;
 }
 
 .login-button:hover {

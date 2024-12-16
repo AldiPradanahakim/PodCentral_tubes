@@ -1,15 +1,15 @@
-@import './landingpage/header.css';
-@import './landingpage/hero.css';
-@import './landingpage/podcast-section.css';
-@import './landingpage/slider-container.css';
-@import './landingpage/podcast-slider-container.css';
-@import './landingpage/podcast-slider-container2.css';
-@import './landingpage/podcast-slider-container3.css';
-@import './landingpage/host-section.css';
-@import './landingpage/footer.css';
+@import "landingpage/header.css";
+@import "landingpage/hero.css";
+@import "landingpage/podcast-section.css";
+@import "landingpage/slider-container.css";
+@import "landingpage/podcast-slider-container.css";
+@import "landingpage/podcast-slider-container2.css";
+@import "landingpage/podcast-slider-container3.css";
+@import "landingpage/host-section.css";
+@import "landingpage/footer.css";
 
 body {
     margin: 0;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     line-height: 1.6;
 }

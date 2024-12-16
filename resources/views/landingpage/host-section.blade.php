@@ -1,4 +1,4 @@
-<section class="host-section">
+{{-- <section class="host-section">
     <div class="title">Pilih 3 Genre Favorit Kamu</div>
     <div class="categories">
         @php
@@ -26,4 +26,4 @@
             </div>
         @endforeach
     </div>
-</section>
+</section> --}}
