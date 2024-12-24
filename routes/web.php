@@ -63,3 +63,9 @@ Route::middleware('web')->group(function () {
         return view('home');
     })->where('any', '.*');
 });
+
+
+//Rute untuk dashboard
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->name('dashboard');
