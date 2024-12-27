@@ -66,7 +66,10 @@
                      class="absolute right-0 mt-2 w-48 bg-black rounded-md shadow-lg py-1 ring-1 ring-black/5">
                     <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-gray-600">Your Profile</a>
                     <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-gray-600">Settings</a>
-                    <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-gray-600">Sign out</a>
+                    <form action="{{ route('logout') }}" method="post">
+                        @csrf
+                    <button class="block px-4 py-2 text-sm text-white hover:bg-gray-600">Sign out</button>
+                    </form>
                 </div>
             </div>
         </header>
