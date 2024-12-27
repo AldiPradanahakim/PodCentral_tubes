@@ -86,7 +86,7 @@
     
                 <p class="mt-8 text-center text-sm text-gray-500">
                     Sudah menjadi anggota?
-                    <a href="/home" class="font-semibold text-indigo-600 hover:text-indigo-500">Masuk di sini</a>
+                    <a href="/login" class="font-semibold text-indigo-600 hover:text-indigo-500">Masuk di sini</a>
                 </p>
             </div>
         </div>
