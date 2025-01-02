@@ -66,10 +66,21 @@
                      class="absolute right-0 mt-2 w-48 bg-black rounded-md shadow-lg py-1 ring-1 ring-black/5">
                     <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-gray-600">Your Profile</a>
                     <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-gray-600">Settings</a>
-                    <form action="{{ route('logout') }}" method="post">
+                    <form id="logoutForm" action="{{ route('logout') }}" method="post">
                         @csrf
-                    <button class="block px-4 py-2 text-sm text-white hover:bg-gray-600">Sign out</button>
+                    <button type="button" onclick="showPopup()" class="block px-4 py-2 text-sm text-white hover:bg-gray-600">Sign out</button>
                     </form>
+                    <div id="logoutPopup" class="hidden fixed inset-0 bg-gray-600 bg-opacity-50 flex items-center justify-center">
+                        <div class="bg-white p-6 rounded shadow-lg">
+                            <p class="mb-4">Are you sure you want to logout?</p>
+                            <button onclick="confirmLogout()" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded mr-2">
+                                Yes
+                            </button>
+                            <button onclick="hidePopup()" class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded">
+                                No
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </header>
