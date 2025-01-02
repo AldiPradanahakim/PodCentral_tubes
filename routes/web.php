@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\ProfileController;
 use App\Http\Middleware\AuthLogin;
 use Illuminate\Support\Facades\Auth;
 
@@ -12,6 +13,10 @@ Route::get('/', function () {
 
 Route::get('/home', function(){
     return view('home.index');
+})->middleware(AuthLogin::class);
+
+Route::get('/profile', function () {
+    return view('home.profile');
 })->middleware(AuthLogin::class);
 
 Route::get('/podcast', function () {
@@ -30,6 +35,6 @@ Route::post('/logout', function () {
 Route::get('/login', [LoginController::class, 'index']);
 Route::post('/login', [LoginController::class, 'login']);
 
-Route::get('/profile', function () {
-    return view('home.profile');
-})->middleware(AuthLogin::class);
+Route::get('/register', [RegisterController::class, 'index']);
+Route::post('/register', [RegisterController::class, 'regis']);
+

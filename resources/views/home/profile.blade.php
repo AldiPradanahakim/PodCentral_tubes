@@ -1,5 +1,6 @@
 <div>
     <h1>Profile</h1>
+    <a href="/home">Back</a>
 </div>
 <div>
     <p><strong>Name:</strong> {{ Auth::user()->name }}</p>
