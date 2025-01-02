@@ -34,7 +34,7 @@
             
             <!-- Card 1 -->
             <div class="max-w-xl mx-auto bg-gray-800 text-white rounded-lg shadow-lg overflow-hidden">
-                <a href="/register">
+                <a href="/login">
                     <div class="p-4">
                         <!-- Judul Podcast di atas Gambar -->
                         <h3 class="text-xl font-semibold mb-2 text-center">Podcast Title</h3>
@@ -58,7 +58,7 @@
     
             <!-- Card 2 -->
             <div class="max-w-xl mx-auto bg-gray-800 text-white rounded-lg shadow-lg overflow-hidden">
-                <a href="/register">
+                <a href="/login">
                     <div class="p-4">
                         <!-- Judul Podcast di atas Gambar -->
                         <h3 class="text-xl font-semibold mb-2 text-center">Podcast Title</h3>
@@ -82,7 +82,7 @@
     
             <!-- Card 3 -->
             <div class="max-w-xl mx-auto bg-gray-800 text-white rounded-lg shadow-lg overflow-hidden">
-                <a href="/register">
+                <a href="/login">
                     <div class="p-4">
                         <!-- Judul Podcast di atas Gambar -->
                         <h3 class="text-xl font-semibold mb-2 text-center">Podcast Title</h3>
@@ -106,7 +106,7 @@
     
             <!-- Card 4 -->
             <div class="max-w-xl mx-auto bg-gray-800 text-white rounded-lg shadow-lg overflow-hidden">
-                <a href="/register">
+                <a href="/login">
                     <div class="p-4">
                         <!-- Judul Podcast di atas Gambar -->
                         <h3 class="text-xl font-semibold mb-2 text-center">Podcast Title</h3>
@@ -130,7 +130,7 @@
     
             <!-- Card 5 -->
             <div class="max-w-xl mx-auto bg-gray-800 text-white rounded-lg shadow-lg overflow-hidden">
-                <a href="/register">
+                <a href="/login">
                     <div class="p-4">
                         <!-- Judul Podcast di atas Gambar -->
                         <h3 class="text-xl font-semibold mb-2 text-center">Podcast Title</h3>
@@ -154,7 +154,7 @@
     
             <!-- Card 6 -->
             <div class="max-w-xl mx-auto bg-gray-800 text-white rounded-lg shadow-lg overflow-hidden">
-                <a href="/register">
+                <a href="/login">
                     <div class="p-4">
                         <!-- Judul Podcast di atas Gambar -->
                         <h3 class="text-xl font-semibold mb-2 text-center">Podcast Title</h3>

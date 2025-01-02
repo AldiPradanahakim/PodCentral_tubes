@@ -39,5 +39,19 @@ window.addEventListener("scroll", () => {
 });
 
     </script>
+
+    <script>
+        function showPopup() {
+            document.getElementById('logoutPopup').classList.remove('hidden');
+        }
+
+        function hidePopup() {
+            document.getElementById('logoutPopup').classList.add('hidden');
+        }
+
+        function confirmLogout() {
+            document.getElementById('logoutForm').submit();
+        }
+    </script>
 </body>
 </html>
