@@ -50,3 +50,7 @@ Route::get('/profile', function () {
 Route::get('/podcast', function () {
     return view('podcast.index');
 })->name('podcast.index');
+
+Route::get('/episode', function () {
+    return view('episode.index');
+})->name('episode.index');

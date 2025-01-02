@@ -1,11 +1,7 @@
 <x-layout>
     <x-sidebar>
+        
         <div class="container overflow-y-auto px-6 py-8 bg-gray-800">
-            <!-- Sticky Header Inside Container -->
-            <div id="sticky-header-container" class="hidden bg-gray-900 text-white text-center py-2 text-lg font-bold shadow-lg mb-4">
-                Nama Podcast
-            </div>
-
             <!-- Main Header -->
             <div class="flex items-center mb-6 py-4">
                 <!-- Profile Image -->
@@ -39,22 +35,6 @@
                     </div>
 
                     <!-- Episode Card 1 -->
-                    <div class="bg-gray-800 rounded-lg shadow-lg p-6 flex mb-6">
-                        <img src="https://via.placeholder.com/112" alt="Episode Image" class="w-32 h-32 rounded-lg shadow-lg">
-                        <div class="ml-6 flex-1">
-                            <h3 class="text-xl font-semibold text-white">Episode Title 1</h3>
-                            <p class="text-gray-400 text-sm">Nama Podcast</p>
-                            <p class="text-gray-500 text-sm mt-2">Sedikit deskripsi episode...</p>
-                            <div class="mt-4 flex gap-4">
-                                <button class="bg-gray-700 hover:bg-gray-600 text-white p-3 rounded-full shadow-lg transition-all duration-200">
-                                    <i class="fa fa-heart text-xl"></i>
-                                </button>
-                                <button class="bg-green-500 hover:bg-green-600 text-white p-3 rounded-full shadow-lg transition-all duration-200 justify-end">
-                                    <i class="fa fa-play text-xl justify-end"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
                     <div class="bg-gray-800 rounded-lg shadow-lg p-6 flex mb-6">
                         <img src="https://via.placeholder.com/112" alt="Episode Image" class="w-32 h-32 rounded-lg shadow-lg">
                         <div class="ml-6 flex-1">
@@ -204,5 +184,6 @@
                 </div>
             </div>
         </div>
+        
     </x-sidebar>
 </x-layout>

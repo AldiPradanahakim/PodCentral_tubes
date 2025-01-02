@@ -46,7 +46,7 @@
             </div>
         
             <!-- See All Episodes -->
-            <a href="">
+            <a href="{{ route('episode.index') }}">
             <div class="mt-8 text-left py-10">
                 <button class="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-full shadow-lg transition-all duration-200 transform hover:scale-105">
                     Lihat Semua Episode
