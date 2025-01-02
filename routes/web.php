@@ -54,3 +54,7 @@ Route::get('/podcast', function () {
 Route::get('/episode', function () {
     return view('episode.index');
 })->name('episode.index');
+
+Route::get('/genre', function () {
+    return view('genre.index');
+});
