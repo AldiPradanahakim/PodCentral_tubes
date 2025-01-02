@@ -2,7 +2,6 @@
     "private": true,
     "type": "module",
     "scripts": {
-        "start": "vite",
         "build": "vite build",
         "dev": "vite"
     },
@@ -12,13 +11,23 @@
         "concurrently": "^9.0.1",
         "laravel-vite-plugin": "^1.0",
         "postcss": "^8.4.47",
-        "react": "^18.3.1",
-        "react-dom": "^18.3.1",
-        "tailwindcss": "^3.4.13",
-        "vite": "^5.4.11"
+        "tailwindcss": "^3.4.17",
+        "vite": "^6.0"
     },
     "dependencies": {
-        "resolve-url-loader": "^5.0.0",
-        "svgo": "^3.3.2"
-    }
+        "react": "^19.0.0",
+        "react-dom": "^19.0.0",
+        "react-scripts": "^5.0.1",
+        "swiper": "^11.1.15"
+    },
+    "name": "podcentral2",
+    "version": "1.0.0",
+    "description": "<p align=\"center\"><a href=\"https://laravel.com\" target=\"_blank\"><img src=\"https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg\" width=\"400\" alt=\"Laravel Logo\"></a></p>",
+    "main": "postcss.config.js",
+    "directories": {
+        "test": "tests"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC"
 }
