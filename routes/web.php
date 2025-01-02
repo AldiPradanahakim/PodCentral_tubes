@@ -30,5 +30,6 @@ Route::post('/logout', function () {
 Route::get('/login', [LoginController::class, 'index']);
 Route::post('/login', [LoginController::class, 'login']);
 
-Route::get('/register', [RegisterController::class, 'index']);
-Route::post('/register', [RegisterController::class, 'regis']);
+Route::get('/profile', function () {
+    return view('home.profile');
+})->middleware(AuthLogin::class);
