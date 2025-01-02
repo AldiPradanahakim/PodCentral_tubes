@@ -46,3 +46,7 @@ Route::get('/history', [HistoryController::class, 'index'])->name('history.index
 Route::get('/profile', function () {
     return view('profile.index');
 })->name('profile.index');
+
+Route::get('/podcast', function () {
+    return view('podcast.index');
+})->name('podcast.index');
