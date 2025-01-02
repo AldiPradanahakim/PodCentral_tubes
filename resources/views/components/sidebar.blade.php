@@ -8,17 +8,17 @@
         </div>
         <!-- Navigation Links -->
         <nav class="flex flex-col px-6 py-4 space-y-4">
-            <a href="#" class="flex items-center text-gray-300 hover:text-white">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h11M9 21v-9m-6 0V6h9m2 2v4m0 0H5m4 0H3m6 4H5" />
+            <a href="/home" class="flex items-center text-gray-300 hover:text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home">
+                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline>
                 </svg>
-                Beranda
+                <span class="ml-2">Beranda</span>
             </a>
-            <a href="#" class="flex items-center text-gray-300 hover:text-white">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12l2-2m0 0l2-2m-2 2l2 2m-2-2v8" />
+            <a href="/koleksi" class="flex items-center text-gray-300 hover:text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bookmark">
+                    <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
                 </svg>
-                Koleksi Saya
+                <span class="ml-2">Koleksi</span>
             </a>
             <a href="/history" class="flex items-center text-gray-300 hover:text-white">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clipboard">
@@ -36,10 +36,9 @@
             <!-- Search Bar dengan Icon Home -->
             <div class="flex items-center  m-auto w-full md:w-1/3 space-x-2">
                 <!-- Icon Home -->
-                <a href="#" class="text-white hover:text-gray-400">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l9-9m0 0l9 9M4.5 12H19.5M12 21V12" />
-                    </svg>
+                <a href="/home" class="text-white hover:text-gray-400">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>  
                 </a>
                 <!-- Search Bar -->
                 <div class="relative m-auto w-full">
@@ -56,22 +55,22 @@
                 </div>
             </div>
 
-            <!-- Profile Dropdown -->
-            <div class="relative" x-data="{ open: false }">
+              <!-- Profile Dropdown -->
+              <div class="relative" x-data="{ open: false }">
                 <button @click="open = !open" class="flex items-center text-white focus:outline-none">
                     <img class="h-8 w-8 rounded-full" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="User Image">
                     <span class="ml-2 text-sm">{{ Auth::user()->name }}</span>
                 </button>
                 <!-- Dropdown Menu -->
                 <div x-show="open" @click.away="open = false" x-transition 
-                     class="absolute right-0 mt-2 w-48 bg-black rounded-md shadow-lg py-1 ring-1 ring-black/5">
+                     class="absolute right-0 mt-2 w-48 bg-black rounded-md shadow-lg py-1 ring-1 ring-black/5 z-50">
                     <a href="/profile" class="block px-4 py-2 text-sm text-white hover:bg-gray-600">Your Profile</a>
                     <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-gray-600">Settings</a>
                     <form id="logoutForm" action="{{ route('logout') }}" method="post">
                         @csrf
                     <button type="button" onclick="showPopup()" class="block px-4 py-2 text-sm text-white hover:bg-gray-600">Sign out</button>
                     </form>
-                    <div id="logoutPopup" class="hidden fixed inset-0 bg-gray-600 bg-opacity-50 flex items-center justify-center">
+                    <div id="logoutPopup" class="hidden fixed inset-0 bg-gray-600 bg-opacity-50 flex items-center justify-center z-50">
                         <div class="bg-white p-6 rounded shadow-lg">
                             <p class="mb-4">Are you sure you want to logout?</p>
                             <button onclick="confirmLogout()" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded mr-2">

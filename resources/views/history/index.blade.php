@@ -48,7 +48,7 @@
             </a>
 
             <!-- Kartu Duplikat Item  -->
-            <a href="">
+            <a href="#">
                 <div class="bg-gray-700 rounded-lg shadow-lg p-4">
                     <!-- Header: Foto Profil & Info -->
                     <div class="flex items-center mb-4">
