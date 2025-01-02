@@ -20,11 +20,11 @@
                 </svg>
                 Koleksi Saya
             </a>
-            <a href="#" class="flex items-center text-gray-300 hover:text-white">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15h11M9 3v9m-6 0V6h9m4 9v-4m0 0H5m6 0H3" />
+            <a href="/history" class="flex items-center text-gray-300 hover:text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clipboard">
+                    <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>
                 </svg>
-                History
+                <span class="ml-2">History</span>
             </a>
         </nav>
     </aside>
