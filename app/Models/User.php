@@ -19,13 +19,13 @@ class User extends Authenticatable
      */
 
     //  Menentukan atribut yang boleh diisi
-     protected $fillable = [
-         'name',
-         'email',
-         'password',
-         'genres', 
-         'created_at',
-     ];
+  //   protected $fillable = [
+  //     'name',
+  //     'email',
+  //     'password',
+  //     'genres', 
+  //     'created_at',
+  //   ];
 
     //  Menentukan atribut yang tidak boleh diisi
     protected $guarded = ['id'];
