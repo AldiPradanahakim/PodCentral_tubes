@@ -70,7 +70,7 @@
                         @csrf
                     <button type="button" onclick="showPopup()" class="block px-4 py-2 text-sm text-white hover:bg-gray-600">Sign out</button>
                     </form>
-                    <div id="logoutPopup" class="hidden fixed inset-0 bg-gray-600 bg-opacity-50 flex items-center justify-center z-50">
+                    <div id="logoutPopup" class="hidden fixed inset-0 bg-gray-600 bg-opacity-50  items-center justify-center z-50">
                         <div class="bg-white p-6 rounded shadow-lg">
                             <p class="mb-4">Are you sure you want to logout?</p>
                             <button onclick="confirmLogout()" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded mr-2">

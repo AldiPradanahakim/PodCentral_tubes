@@ -27,6 +27,6 @@ class RegisterController extends Controller
         $validateData['password'] = bcrypt($validateData['password']);
         // $validateData['created_at'] = Carbon::now('Asia/Jakarta');
 
-        return redirect('/login')->with('success', 'Registration Success! Please login');
+        return redirect('/genre')->with('success', 'Registration Successful! Please select your genres.');
     }
 }

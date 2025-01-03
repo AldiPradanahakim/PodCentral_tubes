@@ -57,4 +57,9 @@ Route::get('/episode', function () {
 
 Route::get('/genre', function () {
     return view('genre.index');
-});
+})->name('genre.index');
+
+use App\Http\Controllers\GenreController;
+
+Route::post('/genre/select', [GenreController::class, 'store'])->name('genre.store');
+
