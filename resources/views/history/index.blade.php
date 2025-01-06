@@ -9,7 +9,7 @@
         <!-- Grid Responsif -->
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             <!-- Kartu Item -->
-            <a href="{{ route('podcast.index') }}">
+            <a href="">
                 <div class="bg-gray-700 rounded-lg shadow-lg p-4">
                     <!-- Header: Foto Profil & Info -->
                     <div class="flex items-center mb-4">
@@ -48,7 +48,7 @@
             </a>
 
             <!-- Kartu Duplikat Item  -->
-            <a href="{{ route('podcast.index') }}">
+            <a href="">
                 <div class="bg-gray-700 rounded-lg shadow-lg p-4">
                     <!-- Header: Foto Profil & Info -->
                     <div class="flex items-center mb-4">
@@ -87,7 +87,7 @@
             </a>
 
             <!-- Kartu duplikat Item -->
-            <a href="{{ route('podcast.index') }}">
+            <a href="">
                 <div class="bg-gray-700 rounded-lg shadow-lg p-4">
                     <!-- Header: Foto Profil & Info -->
                     <div class="flex items-center mb-4">
@@ -126,7 +126,7 @@
             </a>
 
             <!-- Kartu duplikat Item -->
-            <a href="{{ route('podcast.index') }}">
+            <a href="">
                 <div class="bg-gray-700 rounded-lg shadow-lg p-4">
                     <!-- Header: Foto Profil & Info -->
                     <div class="flex items-center mb-4">
@@ -165,7 +165,7 @@
             </a>
 
             <!-- Kartu duplikat Item -->
-            <a href="{{ route('podcast.index') }}">
+            <a href="">
                 <div class="bg-gray-700 rounded-lg shadow-lg p-4">
                     <!-- Header: Foto Profil & Info -->
                     <div class="flex items-center mb-4">
@@ -204,7 +204,7 @@
             </a>
 
             <!-- Kartu duplikat Item -->
-            <a href="{{ route('podcast.index') }}">
+            <a href="">
                 <div class="bg-gray-700 rounded-lg shadow-lg p-4">
                     <!-- Header: Foto Profil & Info -->
                     <div class="flex items-center mb-4">
@@ -243,7 +243,7 @@
             </a>
 
             <!-- Kartu duplikat Item -->
-            <a href="{{ route('podcast.index') }}">
+            <a href="">
                 <div class="bg-gray-700 rounded-lg shadow-lg p-4">
                     <!-- Header: Foto Profil & Info -->
                     <div class="flex items-center mb-4">
@@ -282,7 +282,7 @@
             </a>
 
             <!-- Kartu duplikat Item -->
-            <a href="{{ route('podcast.index') }}">
+            <a href="">
                 <div class="bg-gray-700 rounded-lg shadow-lg p-4">
                     <!-- Header: Foto Profil & Info -->
                     <div class="flex items-center mb-4">
@@ -321,7 +321,7 @@
             </a>
 
             <!-- Kartu duplikat Item -->
-            <a href="{{ route('podcast.index') }}">
+            <a href="">
                 <div class="bg-gray-700 rounded-lg shadow-lg p-4">
                     <!-- Header: Foto Profil & Info -->
                     <div class="flex items-center mb-4">
@@ -360,7 +360,7 @@
             </a>
 
             <!-- Kartu duplikat Item -->
-            <a href="{{ route('podcast.index') }}">
+            <a href="">
                 <div class="bg-gray-700 rounded-lg shadow-lg p-4">
                     <!-- Header: Foto Profil & Info -->
                     <div class="flex items-center mb-4">
@@ -399,7 +399,7 @@
             </a>
             
             <!-- Kartu duplikat Item -->
-            <a href="{{ route('podcast.index') }}">
+            <a href="">
                 <div class="bg-gray-700 rounded-lg shadow-lg p-4">
                     <!-- Header: Foto Profil & Info -->
                     <div class="flex items-center mb-4">
@@ -438,7 +438,7 @@
             </a>
 
             <!-- Kartu duplikat Item -->
-            <a href="{{ route('podcast.index') }}">
+            <a href="">
                 <div class="bg-gray-700 rounded-lg shadow-lg p-4">
                     <!-- Header: Foto Profil & Info -->
                     <div class="flex items-center mb-4">

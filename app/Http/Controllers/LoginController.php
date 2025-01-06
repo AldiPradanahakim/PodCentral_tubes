@@ -14,16 +14,15 @@ class LoginController extends Controller
             'title' => 'Login',
         ]);
     }
-    
+
     public function login(Request $request)
     {
-       $credentials = $request->validate([
+        $credentials = $request->validate([
             'email' => 'required|email:dns',
             'password' => 'required'
         ]);
 
-        if(Auth::attempt($credentials))
-        {
+        if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
             return redirect()->intended('/home');
         }
