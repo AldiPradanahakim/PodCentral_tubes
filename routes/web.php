@@ -58,6 +58,7 @@ Route::get('/podcast/{podcast}', [PodcastController::class, 'show'])->name('podc
 // Halaman genre
 Route::get('/genre', function () {
     return view('genre.index');
+<<<<<<< HEAD
 });
 
 // Dashboard Routes
@@ -74,3 +75,11 @@ Route::prefix('dashboard/pengguna')->middleware(AuthLogin::class)->group(functio
     Route::get('/', [PenggunaController::class, 'index'])->name('dashboard.pengguna.index');
     // Route tambahan untuk create, edit pengguna bisa ditambahkan di sini
 });
+=======
+})->name('genre.index');
+
+use App\Http\Controllers\GenreController;
+
+Route::post('/genre/select', [GenreController::class, 'store'])->name('genre.store');
+
+>>>>>>> a646227ee019cbb4cbedef33577871b477a96c10
