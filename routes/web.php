@@ -13,6 +13,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\PenggunaController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\ManagerGenreController;
 use App\Http\Controllers\ManagerPodcastController;
 
 // Halaman landing (route pertama)
@@ -61,14 +62,8 @@ Route::get('/podcast/{podcast}', [PodcastController::class, 'show'])
 Route::get('/podcasts/author/{author}', [PodcastController::class, 'index'])->name('podcasts.author')
     ->middleware(AuthLogin::class);
 
-
-// Halaman genre
-Route::get('/genre', function () {
-    return view('genre.index');
-});
-
 // Dashboard Routes
-Route::get('/dashboard', [DashboardController::class, 'index'])
+Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard')
     ->middleware(AuthLogin::class);
 
 // Rute untuk mengelola podcast di dashboard
@@ -77,7 +72,11 @@ Route::prefix('dashboard/managepodcast')
     ->group(function () {
         Route::get('/', [ManagerPodcastController::class, 'index'])
             ->name('dashboard.managepodcast.index');
-        // Route tambahan untuk create, edit podcast bisa ditambahkan di sini
+        Route::post('/', [ManagerPodcastController::class, 'store'])->name('dashboard.managepodcast.store');
+        Route::get('/create', [ManagerPodcastController::class, 'create'])->name('dashboard.managepodcast.create');
+        Route::get('/{podcast}/edit', [ManagerPodcastController::class, 'edit'])->name('dashboard.managepodcast.edit');
+        Route::put('/{podcast}', [ManagerPodcastController::class, 'update'])->name('dashboard.managepodcast.update');
+        Route::delete('/{podcast}', [ManagerPodcastController::class, 'destroy'])->name('dashboard.managepodcast.destroy');
     });
 
 // Rute untuk halaman Pengguna di dashboard
@@ -86,5 +85,18 @@ Route::prefix('dashboard/pengguna')
     ->group(function () {
         Route::get('/', [PenggunaController::class, 'index'])
             ->name('dashboard.pengguna.index');
-        // Route tambahan untuk create, edit pengguna bisa ditambahkan di sini
+        Route::get('/{user}', [PenggunaController::class, 'show'])->name('dashboard.pengguna.show');
+        Route::delete('/{user}', [PenggunaController::class, 'destroy'])->name('dashboard.pengguna.destroy');
+    });
+
+// Rute untuk mengelola genre di dashboard
+Route::prefix('dashboard/managegenre')
+    ->middleware(AuthLogin::class)
+    ->group(function () {
+        Route::get('/', [ManagerGenreController::class, 'index'])->name('dashboard.managegenre.index');
+        Route::get('/create', [ManagerGenreController::class, 'create'])->name('dashboard.managegenre.create');
+        Route::post('/', [ManagerGenreController::class, 'store'])->name('dashboard.managegenre.store');
+        Route::get('/{genre}/edit', [ManagerGenreController::class, 'edit'])->name('dashboard.managegenre.edit');
+        Route::put('/{genre}', [ManagerGenreController::class, 'update'])->name('dashboard.managegenre.update');
+        Route::delete('/{genre}', [ManagerGenreController::class, 'destroy'])->name('dashboard.managegenre.destroy');
     });
