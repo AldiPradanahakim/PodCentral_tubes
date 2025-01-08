@@ -65,6 +65,7 @@ Route::get('/podcasts/author/{author}', [PodcastController::class, 'index'])->na
 // Halaman genre
 Route::get('/genre', function () {
     return view('genre.index');
+<<<<<<< HEAD
 });
 
 // Dashboard Routes
@@ -88,3 +89,11 @@ Route::prefix('dashboard/pengguna')
             ->name('dashboard.pengguna.index');
         // Route tambahan untuk create, edit pengguna bisa ditambahkan di sini
     });
+=======
+})->name('genre.index');
+
+use App\Http\Controllers\GenreController;
+
+Route::post('/genre/select', [GenreController::class, 'store'])->name('genre.store');
+
+>>>>>>> c14c123b004419b02eb7023fcf95216989663a59

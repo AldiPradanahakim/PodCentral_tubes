@@ -19,6 +19,26 @@ class User extends Authenticatable
         'profile_image',
     ];
 
+<<<<<<< HEAD
+=======
+    //  Menentukan atribut yang boleh diisi
+  //   protected $fillable = [
+  //     'name',
+  //     'email',
+  //     'password',
+  //     'genres', 
+  //     'created_at',
+  //   ];
+
+    //  Menentukan atribut yang tidak boleh diisi
+    protected $guarded = ['id'];
+
+    /**
+     * The attributes that should be hidden for serialization.
+     *
+     * @var list<string>
+     */
+>>>>>>> c14c123b004419b02eb7023fcf95216989663a59
     protected $hidden = [
         'password',
         'remember_token',
