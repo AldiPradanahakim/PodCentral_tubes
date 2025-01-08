@@ -44,6 +44,7 @@
                 <div class="relative m-auto w-full">
                     <input 
                         type="text" 
+                        id="searchInput" 
                         placeholder="Search" 
                         class="w-full pl-10 pr-4 py-2 rounded-md bg-gray-100 text-gray-800 placeholder-gray-500 focus:ring focus:ring-indigo-500">
                     <div class="absolute top-2 left-3 text-gray-400">
