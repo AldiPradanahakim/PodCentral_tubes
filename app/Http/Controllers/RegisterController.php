@@ -16,6 +16,7 @@ class RegisterController extends Controller
 
     public function regis(Request $request)
     {
+
         $validateData = $request->validate([
             'nama' => 'required|min:3',
             'email' => 'required|email:dns|unique:users',

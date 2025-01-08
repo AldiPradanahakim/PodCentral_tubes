@@ -1,5 +1,7 @@
 import "./bootstrap";
+
 import "../css/app.css";
+
 // JavaScript to show the sticky header only after scrolling
 const stickyHeader = document.getElementById("sticky-header-container");
 const mainHeader = document.querySelector(".container > .flex.items-center");

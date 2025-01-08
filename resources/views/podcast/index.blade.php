@@ -20,7 +20,6 @@
                     <p class="text-sm mt-1 text-gray-400"><span class="font-bold text-gray-200">Genre:</span> Motivation, Islamic</p>
                 </div>
             </div>
-    
             <!-- Action Buttons (Play & Like) in the same div as podcast details -->
             <div class="mt-6 flex gap-4 justify-start">
                 <!-- Play Button -->
@@ -48,7 +47,7 @@
                     </a>
                 </p>
             </div>
-    
+   
             <!-- See All Episodes -->
              <a href="{{ route('episode.index') }}">
             <div class="mt-8 text-left py-10">

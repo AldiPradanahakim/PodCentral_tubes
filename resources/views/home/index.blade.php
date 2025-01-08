@@ -166,8 +166,7 @@
 
             <!-- Grid Responsif -->
             <div class="bg-gray-800 shadow-md p-4">
-                <h2 class="text-2xl font-bold text-white mb-4">PENDIDIKAN</h2>
-            
+                <h2 class="text-2xl font-bold text-white mb-4">PENDIDIKAN</h2>            
                 <!-- Grid Responsif -->
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                     <!-- Kartu Item -->

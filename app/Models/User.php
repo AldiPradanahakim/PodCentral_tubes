@@ -19,8 +19,7 @@ class User extends Authenticatable
         'profile_image',
     ];
 
-<<<<<<< HEAD
-=======
+
     //  Menentukan atribut yang boleh diisi
   //   protected $fillable = [
   //     'name',
@@ -38,7 +37,7 @@ class User extends Authenticatable
      *
      * @var list<string>
      */
->>>>>>> a646227ee019cbb4cbedef33577871b477a96c10
+
     protected $hidden = [
         'password',
         'remember_token',

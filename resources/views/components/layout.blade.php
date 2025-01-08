@@ -39,7 +39,6 @@ window.addEventListener("scroll", () => {
 });
 
     </script>
-
     <script>
         function showPopup() {
             document.getElementById('logoutPopup').classList.remove('hidden');

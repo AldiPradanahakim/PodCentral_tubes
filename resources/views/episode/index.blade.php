@@ -1,6 +1,5 @@
 <x-layout>
-    <x-sidebar>
-        
+    <x-sidebar>        
         <div class="container overflow-y-auto px-6 py-8 bg-gray-800">
             <!-- Main Header -->
             <div class="flex items-center mb-6 py-4">
@@ -184,6 +183,5 @@
                 </div>
             </div>
         </div>
-        
     </x-sidebar>
 </x-layout>

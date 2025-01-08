@@ -14,11 +14,29 @@ use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ManagerPodcastController;
 
+
 // Halaman landing (route pertama)
 Route::get('/', function () {
     return view('landingpage', ['title' => 'Landing Page']);
 });
 
+Route::get('/podcast', function () {
+    return view('podcast.index');
+});
+
+Route::get('/episode', function () {
+    return view('episode.index');
+});
+
+
+Route::get('/login', [LoginController::class, 'index']);
+Route::post('/login', [LoginController::class, 'login']);
+
+Route::get('/register', [RegisterController::class, 'index']);
+Route::post('/register', [RegisterController::class, 'regis']);
+
+Route::get('/home', [HomeController::class, 'index']);
+=======
 Route::get('/search', [HomeController::class, 'search'])->name('search');
 
 // Halaman utama setelah login, menggunakan middleware AuthLogin
@@ -58,7 +76,6 @@ Route::get('/podcast/{podcast}', [PodcastController::class, 'show'])->name('podc
 // Halaman genre
 Route::get('/genre', function () {
     return view('genre.index');
-<<<<<<< HEAD
 });
 
 // Dashboard Routes
@@ -75,11 +92,10 @@ Route::prefix('dashboard/pengguna')->middleware(AuthLogin::class)->group(functio
     Route::get('/', [PenggunaController::class, 'index'])->name('dashboard.pengguna.index');
     // Route tambahan untuk create, edit pengguna bisa ditambahkan di sini
 });
-=======
 })->name('genre.index');
 
 use App\Http\Controllers\GenreController;
 
 Route::post('/genre/select', [GenreController::class, 'store'])->name('genre.store');
 
->>>>>>> a646227ee019cbb4cbedef33577871b477a96c10
+
