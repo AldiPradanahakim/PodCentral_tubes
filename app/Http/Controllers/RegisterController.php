@@ -16,6 +16,7 @@ class RegisterController extends Controller
 
     public function regis(Request $request)
     {
+
         $validateData = $request->validate([
             'nama' => 'required|min:3',
             'email' => 'required|email:dns|unique:users',
@@ -26,8 +27,6 @@ class RegisterController extends Controller
         $validateData['password'] = bcrypt($validateData['password']);
 
         User::create($validateData);
-
-
-        return redirect('/genre')->with('success', 'Registration Successful! Please select your genres.');
+        return redirect('/login')->with('success', 'Pendaftaran berhasil! Silahkan login.');
     }
 }

@@ -1,4 +1,4 @@
-<x-layout>
+{{-- <x-layout>
     <!-- Genre Selection Section -->
     <section class="container mx-auto p-7" id="genre-selection">
         <div class="title text-3xl font-bold text-center mb-6 text-white">Pilih 3 Genre Favorit Kamu</div>
@@ -306,4 +306,4 @@
         }
     </style>
 
-</x-layout>
+</x-layout> --}}
