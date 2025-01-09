@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Podcast;
+
 abstract class Controller
 {
     public function showPodcasts()

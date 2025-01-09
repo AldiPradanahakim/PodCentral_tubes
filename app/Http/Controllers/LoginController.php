@@ -14,16 +14,25 @@ class LoginController extends Controller
             'title' => 'Login',
         ]);
     }
-    
+
+<<<<<<< HEAD
+
+=======
+>>>>>>> BackEnd
     public function login(Request $request)
     {
-       $credentials = $request->validate([
+        $credentials = $request->validate([
+
             'email' => 'required|email:dns',
             'password' => 'required'
         ]);
 
-        if(Auth::attempt($credentials))
-        {
+
+        if (Auth::attempt($credentials)) {
+<<<<<<< HEAD
+=======
+
+>>>>>>> BackEnd
             $request->session()->regenerate();
             return redirect()->intended('/home');
         }

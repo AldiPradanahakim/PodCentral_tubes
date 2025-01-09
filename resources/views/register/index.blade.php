@@ -11,11 +11,11 @@
                     @csrf
                     <!-- Name field -->
                     <div class="mb-4">
-                        <label for="name" class="block text-sm font-medium text-white">Nama</label>
-                        <div class="mt-2 @error('name') border-red-500 @enderror">
-                            <input type="text" name="name" id="name" value="{{ old('name') }}" autofocus autocomplete="off" class="block w-full rounded-md bg-white px-4 py-3 text-base text-black outline-none shadow-sm focus:ring-2 focus:ring-indigo-500 sm:text-sm">
+                        <label for="nama" class="block text-sm font-medium text-white">Nama</label>
+                        <div class="mt-2 @error('nama') border-red-500 @enderror">
+                            <input type="text" name="nama" id="nama" value="{{ old('nama') }}" autofocus autocomplete="off" class="block w-full rounded-md bg-white px-4 py-3 text-base text-black outline-none shadow-sm focus:ring-2 focus:ring-indigo-500 sm:text-sm">
                         </div>
-                        @error('name') 
+                        @error('nama') 
                         <div class="mt-2 text-sm text-red-600">{{ $message }}</div> 
                         @enderror
                     </div>
