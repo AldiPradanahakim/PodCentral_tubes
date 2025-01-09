@@ -13,6 +13,7 @@
         </div>
         
     </div>
+
    <!-- Bagian Podcast Pilihan -->
     <swiper-container class="mySwiper py-5" pagination="true" pagination-clickable="true" direction="vertical"
     space-between="30" mousewheel="true">
@@ -195,8 +196,7 @@
         </div>
 
     </div>
-</section>
-    
+</section> 
     
     
 

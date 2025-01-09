@@ -1056,7 +1056,10 @@
         },
         {
             "name": "laravel/framework",
+<<<<<<< HEAD
 
+=======
+>>>>>>> BackEnd
             "version": "v11.37.0",
             "source": {
                 "type": "git",
@@ -1067,7 +1070,10 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/laravel/framework/zipball/6cb103d2024b087eae207654b3f4b26646119ba5",
                 "reference": "6cb103d2024b087eae207654b3f4b26646119ba5",
+<<<<<<< HEAD
 
+=======
+>>>>>>> BackEnd
                 "shasum": ""
             },
             "require": {
@@ -1268,9 +1274,13 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
+<<<<<<< HEAD
 
             "time": "2025-01-02T20:10:21+00:00"
 
+=======
+            "time": "2025-01-02T20:10:21+00:00"
+>>>>>>> BackEnd
         },
         {
             "name": "laravel/prompts",
@@ -2114,7 +2124,10 @@
         },
         {
             "name": "nesbot/carbon",
+<<<<<<< HEAD
 
+=======
+>>>>>>> BackEnd
             "version": "3.8.4",
             "source": {
                 "type": "git",
@@ -2125,7 +2138,10 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/129700ed449b1f02d70272d2ac802357c8c30c58",
                 "reference": "129700ed449b1f02d70272d2ac802357c8c30c58",
+<<<<<<< HEAD
 
+=======
+>>>>>>> BackEnd
                 "shasum": ""
             },
             "require": {
@@ -2218,9 +2234,13 @@
                     "type": "tidelift"
                 }
             ],
+<<<<<<< HEAD
 
             "time": "2024-12-27T09:25:35+00:00"
 
+=======
+            "time": "2024-12-27T09:25:35+00:00"
+>>>>>>> BackEnd
         },
         {
             "name": "nette/schema",
@@ -3979,8 +3999,11 @@
             "time": "2024-12-30T19:00:17+00:00"
         },
         {
+<<<<<<< HEAD
             "name": "symfony/http-kernel",
 
+=======
+>>>>>>> BackEnd
             "version": "v7.2.2",
             "source": {
                 "type": "git",
@@ -3990,9 +4013,13 @@
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/http-kernel/zipball/3c432966bd8c7ec7429663105f5a02d7e75b4306",
+<<<<<<< HEAD
                 "reference": "3c432966bd8c7ec7429663105f5a02d7e75b4306",
 
                 "shasum": ""
+=======
+                "reference": "3c432966bd8c7ec7429663105f5a02d7e75b4306"
+>>>>>>> BackEnd
             },
             "require": {
                 "php": ">=8.2",
@@ -4076,9 +4103,17 @@
             "description": "Provides a structured process for converting a Request into a Response",
             "homepage": "https://symfony.com",
             "support": {
+<<<<<<< HEAD
 
                 "source": "https://github.com/symfony/http-kernel/tree/v7.2.2"
 
+=======
+<<<<<<< HEAD
+                "source": "https://github.com/symfony/http-kernel/tree/v7.2.2"
+=======
+                "source": "https://github.com/symfony/http-kernel/tree/v7.2.1"
+>>>>>>> 66760fa33ec1e876d1c3722833bbcd9fe5cdda4b
+>>>>>>> BackEnd
             },
             "funding": [
                 {
@@ -4094,9 +4129,17 @@
                     "type": "tidelift"
                 }
             ],
+<<<<<<< HEAD
 
             "time": "2024-12-31T14:59:40+00:00"
 
+=======
+<<<<<<< HEAD
+            "time": "2024-12-31T14:59:40+00:00"
+=======
+            "time": "2024-12-11T12:09:10+00:00"
+>>>>>>> 66760fa33ec1e876d1c3722833bbcd9fe5cdda4b
+>>>>>>> BackEnd
         },
         {
             "name": "symfony/mailer",

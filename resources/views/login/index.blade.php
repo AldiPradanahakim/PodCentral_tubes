@@ -1,4 +1,5 @@
 <x-layout>
+ 
     <div class="flex min-h-screen flex-col justify-center items-center bg-gray-900 p-6">
         <div class="w-full max-w-md bg-gray-800 p-8 rounded-lg shadow-lg">
 

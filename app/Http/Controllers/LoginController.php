@@ -15,7 +15,10 @@ class LoginController extends Controller
         ]);
     }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> BackEnd
     public function login(Request $request)
     {
         $credentials = $request->validate([
@@ -26,6 +29,10 @@ class LoginController extends Controller
 
 
         if (Auth::attempt($credentials)) {
+<<<<<<< HEAD
+=======
+
+>>>>>>> BackEnd
             $request->session()->regenerate();
             return redirect()->intended('/home');
         }

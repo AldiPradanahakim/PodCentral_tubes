@@ -90,7 +90,6 @@
         <!-- Main content -->
             {{ $slot }}
 
-
             <!-- Footer Audio Player -->
             <footer class="bg-black text-white p-4 fixed bottom-0 left-0 w-full flex items-center space-x-4">
                 <!-- Playback Controls -->
@@ -124,5 +123,6 @@
                     </div>
                 </div>
             </footer>
+
     </div>
 </div>
