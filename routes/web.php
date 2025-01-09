@@ -16,6 +16,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ManagerGenreController;
 use App\Http\Controllers\ManagerPodcastController;
 
+
 // Halaman landing (route pertama)
 Route::get('/', function () {
     return view('landingpage', ['title' => 'Landing Page']);
@@ -30,9 +31,11 @@ Route::get('/home', [HomeController::class, 'index'])
     ->middleware(AuthLogin::class);
 
 // Halaman profile setelah login
+
 Route::get('/profile', function () {
     return view('home.profile');
 })->middleware(AuthLogin::class);
+
 
 // Logout user
 Route::post('/logout', function () {

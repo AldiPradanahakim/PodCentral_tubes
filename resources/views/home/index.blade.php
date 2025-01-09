@@ -2,6 +2,7 @@
     <x-sidebar>
         <div class="flex-1 overflow-y-auto bg-gray-800 p-4">
 
+
             <!-- Grid Responsif -->
             <div class="bg-gray-800 shadow-md p-4">
                 <h2 class="text-2xl font-bold text-white mb-4">HOROR</h2>
@@ -91,6 +92,5 @@
                 });
         });
     </script>
-    
     
 </x-layout>

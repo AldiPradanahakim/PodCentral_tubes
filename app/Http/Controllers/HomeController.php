@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers;
 
+
 use App\Models\Podcast;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
+
     /**
      * Menampilkan halaman utama dengan podcast berdasarkan pencarian.
      *

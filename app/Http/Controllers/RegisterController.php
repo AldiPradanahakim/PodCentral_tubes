@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 
+
 class RegisterController extends Controller
 {
     public function index()
@@ -17,6 +18,7 @@ class RegisterController extends Controller
     public function regis(Request $request)
     {
 
+
         $validateData = $request->validate([
             'nama' => 'required|min:3',
             'email' => 'required|email:dns|unique:users',
@@ -28,5 +30,6 @@ class RegisterController extends Controller
 
         User::create($validateData);
         return redirect('/login')->with('success', 'Pendaftaran berhasil! Silahkan login.');
+
     }
 }
