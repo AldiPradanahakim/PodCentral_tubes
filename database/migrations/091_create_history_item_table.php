@@ -13,12 +13,13 @@ return new class extends Migration
     {
         Schema::create('history_item', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->bigInteger('history_id')->unsigned();
+            // $table->bigInteger('history_id')->unsigned();
+            $table->foreignId('history_id')->unsigned()->onDelete('cascade');
             $table->bigInteger('id_podcast')->unsigned();
             $table->timestamps();
 
             // Relasi dengan tabel history
-            $table->foreign('history_id')->references('id')->on('history')->onDelete('cascade');
+            // $table->foreign('history_id')->references('id')->on('history')->onDelete('cascade');
 
             // Relasi dengan tabel podcast
             $table->foreign('id_podcast')->references('id')->on('podcast')->onDelete('cascade');

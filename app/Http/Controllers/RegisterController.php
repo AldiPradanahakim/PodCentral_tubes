@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\Role;
 
 class RegisterController extends Controller
 {
@@ -25,9 +26,13 @@ class RegisterController extends Controller
         // Enkripsi password sebelum membuat user
         $validateData['password'] = bcrypt($validateData['password']);
 
+        // Menambahkan role_id dengan default role 2 (user)
+        $validateData['role_id'] = 2;
+        // dd($validateData);
+
+        // Membuat user baru
         User::create($validateData);
 
-
-        return redirect('/genre')->with('success', 'Registration Successful! Please select your genres.');
+        return redirect('/login')->with('success', 'Registration Successful! Please login to continue.');
     }
 }

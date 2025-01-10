@@ -21,6 +21,8 @@ return new class extends Migration
             $table->string('password');
             $table->string('profile_image')->nullable();
             $table->timestamps();
+            $table->bigInteger('Role_id')->unsigned();
+            $table->foreign('Role_id')->references('id')->on('roles')->onDelete('cascade');
         });
 
         // Tabel password_reset_tokens
