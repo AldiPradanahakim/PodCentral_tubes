@@ -2,38 +2,31 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Genre;
 use App\Models\Podcast;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
     /**
-     * Menampilkan halaman utama dengan podcast berdasarkan pencarian.
+     * Menampilkan halaman utama dengan podcast berdasarkan genre.
      *
-     * @param \Illuminate\Http\Request $request
+     * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\View\View
      */
     public function index(Request $request)
     {
-        // Ambil query pencarian dari parameter 'search'
-        $search = $request->input('search');
+        // Ambil semua data genre beserta podcast dan author terkaitnya
+        $genres = Genre::with('podcasts.author')->get();
 
-        // Ambil data podcast dengan relasi 'author' dan filter berdasarkan pencarian
-        $podcasts = Podcast::with('author')
-            ->when($search, function ($query, $search) {
-                return $query->where('nama', 'like', "%$search%")
-                    ->orWhere('desc', 'like', "%$search%");
-            })
-            ->get();
-
-        // Kembalikan view dengan data podcast yang telah difilter
-        return view('home.index', compact('podcasts'));
+        // Kirim view dengan data genre
+        return view('home.index', compact('genres'));
     }
 
     /**
      * Menangani pencarian podcast secara langsung (AJAX).
      *
-     * @param \Illuminate\Http\Request $request
+     * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\JsonResponse
      */
     public function search(Request $request)
@@ -46,11 +39,13 @@ class HomeController extends Controller
         // Ambil query pencarian dari parameter 'search'
         $search = $request->input('search');
 
-        // Ambil data podcast dengan relasi 'author' dan filter berdasarkan pencarian
         $podcasts = Podcast::with('author')
-            ->when($search, function ($query, $search) {
-                return $query->where('nama', 'like', "%$search%")
-                    ->orWhere('desc', 'like', "%$search%");
+            ->where('nama', 'LIKE', "%$search%")
+            ->orWhereHas('author', function ($query) use ($search) {
+                $query->where('nama', 'LIKE', "%$search%");
+            })
+            ->orWhereHas('genre', function ($query) use ($search) {
+                $query->where('nama', 'LIKE', "%$search%");
             })
             ->get();
 

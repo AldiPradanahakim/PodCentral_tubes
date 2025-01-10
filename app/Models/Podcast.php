@@ -19,12 +19,11 @@ class Podcast extends Model
         'id_genre',
         'duration',
         'release_date',
-        'files',
+        'files', // <-- Pastikan kolom ieu aya
         'image'
     ];
 
     protected $dates = ['release_date'];
-
 
     /**
      * Mendapatkan user yang memiliki podcast ini.
@@ -49,6 +48,8 @@ class Podcast extends Model
 
     /**
      * Relasi dengan table koleksi_item (One to Many)
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
     public function koleksi_items(): HasMany
     {
@@ -56,9 +57,18 @@ class Podcast extends Model
     }
     /**
      * Relasi dengan table history_item (One to Many)
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
     public function history_items(): HasMany
     {
-        return $this->hasMany(HistoryItem::class, 'id_podcast');
+        return $this->hasMany(HistoryItem::class, 'podcast_id');
+    }
+
+    public function isInUserCollection($userId)
+    {
+        return KoleksiItem::whereHas('koleksi', function ($query) use ($userId) {
+            $query->where('id_user', $userId);
+        })->where('id_podcast', $this->id)->exists();
     }
 }

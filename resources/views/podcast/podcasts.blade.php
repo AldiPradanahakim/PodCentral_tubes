@@ -4,13 +4,23 @@
         <div class="container overflow-y-auto px-6 py-8 bg-gray-800">
             <!-- Main Header -->
             <div class="flex items-center mb-6 py-4">
-                <img src="{{ auth()->user()->image ? asset('storage/' . auth()->user()->image) : 'https://via.placeholder.com/112' }}" 
-                     alt="Profile Image" 
-                     class="w-28 h-28 rounded-full shadow-lg object-cover">
+                 @if (isset($podcasts[0]))
+                    <img src="{{ $podcasts[0]->author->profile_image ? asset('storage/' . $podcasts[0]->author->profile_image) : 'https://via.placeholder.com/112' }}" 
+                        alt="Profile Image" 
+                        class="w-28 h-28 rounded-full shadow-lg object-cover">
+                    <div class="ml-6 flex flex-col justify-center">
+                        <h1 class="text-3xl font-bold text-white">{{ $podcasts[0]->author->nama }}</h1>
+                    </div>
+                @else
+                    <img src="{{ auth()->user()->image ? asset('storage/' . auth()->user()->image) : 'https://via.placeholder.com/112' }}" 
+                        alt="Profile Image" 
+                        class="w-28 h-28 rounded-full shadow-lg object-cover">
+                    <div class="ml-6 flex flex-col justify-center">
+                        <h1 class="text-3xl font-bold text-white">{{ auth()->user()->nama }}</h1>
+                    </div>
+                @endif
                 
-                <div class="ml-6 flex flex-col justify-center">
-                    <h1 class="text-3xl font-bold text-white">{{ auth()->user()->nama }}</h1>
-                </div>
+                
             
                 <button class="ml-auto bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-6 rounded-full shadow-lg transition-all duration-200">
                     Follow
@@ -32,34 +42,36 @@
                     </div>
 
                     @foreach($podcasts as $podcast)
-                    <div class="bg-gray-800 rounded-lg shadow-lg p-6 flex mb-6">
-                        <img src="{{ $podcast->image ? asset('storage/' . $podcast->image) : 'https://via.placeholder.com/112' }}" 
-                            alt="Podcast Image" 
-                            class="w-32 h-32 rounded-lg shadow-lg object-cover">
-                        <div class="ml-6 flex-1">
-                            <h3 class="text-xl font-semibold text-white">{{ $podcast->nama }}</h3>
-                            <p class="text-gray-400 text-sm">{{ $podcast->author->nama }}</p>
-                            <p class="text-gray-500 text-sm mt-2">{{ Str::limit($podcast->desc, 150) }}</p>
-                            <div class="mt-4 flex gap-4">
-                                @if($podcast->files)
-                                <button class="bg-green-500 hover:bg-green-600 text-white p-3 rounded-full shadow-lg transition-all duration-200">
-                                    <i class="fa fa-play text-xl"></i>
-                                </button>
-                                @endif
-                                <button class="bg-gray-700 hover:bg-gray-600 text-white p-3 rounded-full shadow-lg transition-all duration-200">
-                                    <i class="fa fa-heart text-xl"></i>
-                                </button>
-                            </div>
-                            <div class="mt-2 text-sm text-gray-400">
-                                <span>{{ $podcast->duration }} min • </span>
-                                <span>{{ $podcast->release_date ? date('d M Y', strtotime($podcast->release_date)) : 'No date' }}</span>
+                    <a href="{{ route('podcast.show', $podcast->id) }}" class="block">
+                        <div class="bg-gray-800 rounded-lg shadow-lg p-6 flex mb-6 hover:bg-gray-700 transition-colors duration-200">
+                            <img src="{{ $podcast->image ? asset('storage/' . $podcast->image) : 'https://via.placeholder.com/112' }}" 
+                                alt="Podcast Image" 
+                                class="w-32 h-32 rounded-lg shadow-lg object-cover">
+                            <div class="ml-6 flex-1">
+                                <h3 class="text-xl font-semibold text-white">{{ $podcast->nama }}</h3>
+                                <p class="text-gray-400 text-sm">{{ $podcast->author->nama }}</p>
+                                <p class="text-gray-500 text-sm mt-2">{{ Str::limit($podcast->desc, 150) }}</p>
+                                <div class="mt-4 flex gap-4">
+                                    @if($podcast->files)
+                                    <button class="bg-green-500 hover:bg-green-600 text-white p-3 rounded-full shadow-lg transition-all duration-200">
+                                        <i class="fa fa-play text-xl"></i>
+                                    </button>
+                                    @endif
+                                    <button class="bg-gray-700 hover:bg-gray-600 text-white p-3 rounded-full shadow-lg transition-all duration-200">
+                                        <i class="fa fa-heart text-xl"></i>
+                                    </button>
+                                </div>
+                                <div class="mt-2 text-sm text-gray-400">
+                                    <span>{{ $podcast->duration }} min • </span>
+                                    <span>{{ $podcast->release_date ? date('d M Y', strtotime($podcast->release_date)) : 'No date' }}</span>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
                     @endforeach
                 </div>
 
-                <!-- Right Section: About -->
+                {{-- <!-- Right Section: About -->
                 <div class="w-72 bg-gray-700 text-white rounded-lg p-6 shadow-lg">
                     <h3 class="text-2xl font-semibold mb-4">About This Podcast</h3>
                     <p class="text-gray-300 leading-relaxed">
@@ -74,7 +86,7 @@
                             <li>Category: Technology</li>
                         </ul>
                     </div>
-                </div>
+                </div> --}}
             </div>
         </div>
         

@@ -47,7 +47,7 @@
             </div>
     
             <!-- Email and Password Fields -->
-            <form action="/login" method="POST">
+            <form action="{{ route('login.submit') }}" method="POST">
                 @csrf
             <div class="mt-8 space-y-6">
                 <div>

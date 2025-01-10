@@ -59,9 +59,14 @@
               <!-- Profile Dropdown -->
               <div class="relative" x-data="{ open: false }">
                 <button @click="open = !open" class="flex items-center text-white focus:outline-none">
-                    <img class="h-8 w-8 rounded-full" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="User Image">
-                    <span class="ml-2 text-sm">{{ Auth::user()->name }}</span>
-                </button>
+                    @if(Auth::check() && Auth::user()->profile_image)
+                        <img class="h-10 w-10 rounded-full" src="{{ asset('storage/' . Auth::user()->profile_image) }}" alt="User Image">
+                        @else
+                         <img class="h-8 w-8 rounded-full" src="https://via.placeholder.com/112" alt="User Image">
+                    @endif
+                    {{-- <span class="ml-2 text-sm">{{ Auth::check() ? Auth::user()->nama : 'Guest' }}</span> --}}
+              </button>
+    
                 <!-- Dropdown Menu -->
                 <div x-show="open" @click.away="open = false" x-transition 
                      class="absolute right-0 mt-2 w-48 bg-black rounded-md shadow-lg py-1 ring-1 ring-black/5 z-50">
@@ -91,7 +96,7 @@
             {{ $slot }}
 
             <!-- Footer Audio Player -->
-            <footer class="bg-black text-white p-4 fixed bottom-0 left-0 w-full flex items-center space-x-4">
+            {{-- <footer class="bg-black text-white p-4 fixed bottom-0 left-0 w-full flex items-center space-x-4">
                 <!-- Playback Controls -->
                 <div class="flex items-center space-x-2">
                     <button class="w-6 h-6 flex items-center justify-center bg-gray-700 rounded-full hover:bg-gray-600 hover:scale-105 transition duration-200">
@@ -122,7 +127,7 @@
                         <span>1:25:17</span>
                     </div>
                 </div>
-            </footer>
+            </footer> --}}
 
     </div>
 </div>
