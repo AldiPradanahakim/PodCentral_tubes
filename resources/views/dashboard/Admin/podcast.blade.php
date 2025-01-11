@@ -185,6 +185,17 @@
                                     <button class="bg-yellow-500 text-white px-3 py-1 rounded hover:bg-yellow-600">Ubah</button>
                                     <button class="bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700">Hapus</button>
                                 </td>
+                                <!-- Data Podcast 11 -->
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-4 py-2">011</td>
+                                <td class="px-4 py-2">Life Stories</td>
+                                <td class="px-4 py-2">Storytellers</td>
+                                <td class="px-4 py-2">Lifestyle</td>
+                                <td class="px-4 py-2">2022</td>
+                                <td class="px-4 py-2 flex space-x-2">
+                                    <button class="bg-yellow-500 text-white px-3 py-1 rounded hover:bg-yellow-600">Ubah</button>
+                                    <button class="bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700">Hapus</button>
+                                </td>
                             </tr>
                         </tbody>
                     </table>
