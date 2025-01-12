@@ -32,7 +32,7 @@
         <!-- Main Content -->
         <div class="ml-64 w-full">
             <header class="bg-white shadow-md py-4 px-6">
-                <h1 class="text-2xl font-semibold">Edit Data Podcast</h1>
+                <h1 class="text-2xl font-semibold">Data Podcast</h1>
             </header>
 
             <main class="p-6">
@@ -60,14 +60,14 @@
                                 <th class="px-4 py-2">#</th>
                                 <th class="px-4 py-2">Judul Podcast</th>
                                 <th class="px-4 py-2">Channel</th>
-                                <th class="px-4 py-2">Genre Podcast</th>
-                                <th class="px-4 py-2">Tahun rilis</th>
+                                <th class="px-4 py-2">Genre</th>
+                                <th class="px-4 py-2">Tahun Rilis</th>
                                 <th class="px-4 py-2">Aksi</th>
                             </tr>
                         </thead>
                         <tbody id="tableBody" class="divide-y divide-gray-200">
-                             <!-- Data Podcast 1 -->
-                             <tr class="hover:bg-gray-50">
+                                  <!-- Data Podcast 1 -->
+                                  <tr class="hover:bg-gray-50">
                                 <td class="px-4 py-2">001</td>
                                 <td class="px-4 py-2">Don't Judge Yourself</td>
                                 <td class="px-4 py-2">Akbar</td>
@@ -185,24 +185,10 @@
                                     <button class="bg-yellow-500 text-white px-3 py-1 rounded hover:bg-yellow-600">Ubah</button>
                                     <button class="bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700">Hapus</button>
                                 </td>
-                                <!-- Data Podcast 11 -->
-                            <tr class="hover:bg-gray-50">
-                                <td class="px-4 py-2">011</td>
-                                <td class="px-4 py-2">Life Stories</td>
-                                <td class="px-4 py-2">Storytellers</td>
-                                <td class="px-4 py-2">Lifestyle</td>
-                                <td class="px-4 py-2">2022</td>
-                                <td class="px-4 py-2 flex space-x-2">
-                                    <button class="bg-yellow-500 text-white px-3 py-1 rounded hover:bg-yellow-600">Ubah</button>
-                                    <button class="bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700">Hapus</button>
-                                </td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
-
-                <!-- Pagination -->
-              
             </main>
 
             <footer class="bg-gray-800 text-white text-center py-4 mt-6">
@@ -214,26 +200,23 @@
     <!-- Modal -->
     <div id="editModal" class="fixed inset-0 bg-gray-600 bg-opacity-50 hidden justify-center items-center z-50">
         <div class="bg-white rounded-lg shadow-lg p-6 w-1/3">
-            <h2 class="text-xl font-semibold mb-4">Edit Data User</h2>
+            <h2 class="text-xl font-semibold mb-4">Edit Data Podcast</h2>
             <form>
                 <div class="mb-4">
-                    <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
-                    <input type="text" id="name" value="John Doe" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+                    <label for="judul" class="block text-sm font-medium text-gray-700">Judul Podcast</label>
+                    <input type="text" id="judul" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
                 </div>
                 <div class="mb-4">
-                    <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
-                    <input type="email" id="email" value="john@example.com" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+                    <label for="channel" class="block text-sm font-medium text-gray-700">Channel</label>
+                    <input type="text" id="channel" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
                 </div>
                 <div class="mb-4">
-                    <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
-                    <input type="pasword" id="pasword" value="john123" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+                    <label for="genre" class="block text-sm font-medium text-gray-700">Genre</label>
+                    <input type="text" id="genre" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
                 </div>
                 <div class="mb-4">
-                    <label for="role" class="block text-sm font-medium text-gray-700">Role</label>
-                    <select id="role" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
-                        <option>Admin</option>
-                        <option>User</option>
-                    </select>
+                    <label for="tahun_rilis" class="block text-sm font-medium text-gray-700">Tahun Rilis</label>
+                    <input type="text" id="tahun_rilis" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
                 </div>
                 <div class="flex justify-end space-x-2">
                     <button type="button" class="px-4 py-2 bg-gray-300 rounded hover:bg-gray-400" onclick="closeModal()">Cancel</button>
