@@ -66,123 +66,115 @@
                             </tr>
                         </thead>
                         <tbody id="tableBody" class="divide-y divide-gray-200">
-                                  <!-- Data Podcast 1 -->
-                                  <tr class="hover:bg-gray-50">
+                            <!-- Data rows -->
+                            <tr class="hover:bg-gray-50">
                                 <td class="px-4 py-2">001</td>
-                                <td class="px-4 py-2">Don't Judge Yourself</td>
-                                <td class="px-4 py-2">Akbar</td>
+                                <td class="px-4 py-2">Podcast A</td>
+                                <td class="px-4 py-2">Channel A</td>
                                 <td class="px-4 py-2">Horror</td>
-                                <td class="px-4 py-2">2024</td>
-                                <td class="px-4 py-2 flex space-x-2">
-                                    <button class="bg-yellow-500 text-white px-3 py-1 rounded hover:bg-yellow-600">Ubah</button>
-                                    <button class="bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700">Hapus</button>
-                                </td>
-                            </tr>
-                            <!-- Data Podcast 2 -->
-                            <tr class="hover:bg-gray-50">
-                                <td class="px-4 py-2">002</td>
-                                <td class="px-4 py-2">You Can Be Happy</td>
-                                <td class="px-4 py-2">Akbar</td>
-                                <td class="px-4 py-2">Horror</td>
-                                <td class="px-4 py-2">2024</td>
-                                <td class="px-4 py-2 flex space-x-2">
-                                    <button class="bg-yellow-500 text-white px-3 py-1 rounded hover:bg-yellow-600">Ubah</button>
-                                    <button class="bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700">Hapus</button>
-                                </td>
-                            </tr>
-                            <!-- Data Podcast 3 -->
-                            <tr class="hover:bg-gray-50">
-                                <td class="px-4 py-2">003</td>
-                                <td class="px-4 py-2">Sleepy Stories</td>
-                                <td class="px-4 py-2">Akbar</td>
-                                <td class="px-4 py-2">Horror</td>
-                                <td class="px-4 py-2">2023</td>
-                                <td class="px-4 py-2 flex space-x-2">
-                                    <button class="bg-yellow-500 text-white px-3 py-1 rounded hover:bg-yellow-600">Ubah</button>
-                                    <button class="bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700">Hapus</button>
-                                </td>
-                            </tr>
-                            <!-- Data Podcast 4 -->
-                            <tr class="hover:bg-gray-50">
-                                <td class="px-4 py-2">004</td>
-                                <td class="px-4 py-2">Podcast Dunia</td>
-                                <td class="px-4 py-2">Channel ID</td>
-                                <td class="px-4 py-2">Comedy</td>
-                                <td class="px-4 py-2">2022</td>
-                                <td class="px-4 py-2 flex space-x-2">
-                                    <button class="bg-yellow-500 text-white px-3 py-1 rounded hover:bg-yellow-600">Ubah</button>
-                                    <button class="bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700">Hapus</button>
-                                </td>
-                            </tr>
-                            <!-- Data Podcast 5 -->
-                            <tr class="hover:bg-gray-50">
-                                <td class="px-4 py-2">005</td>
-                                <td class="px-4 py-2">Chill Talks</td>
-                                <td class="px-4 py-2">Fahri</td>
-                                <td class="px-4 py-2">Science</td>
                                 <td class="px-4 py-2">2021</td>
                                 <td class="px-4 py-2 flex space-x-2">
-                                    <button class="bg-yellow-500 text-white px-3 py-1 rounded hover:bg-yellow-600">Ubah</button>
+                                    <button class="bg-yellow-500 text-white px-3 py-1 rounded hover:bg-yellow-600" onclick="openModal()">Ubah</button>
                                     <button class="bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700">Hapus</button>
                                 </td>
                             </tr>
-                            <!-- Data Podcast 6 -->
                             <tr class="hover:bg-gray-50">
-                                <td class="px-4 py-2">006</td>
-                                <td class="px-4 py-2">Daily Motivation</td>
-                                <td class="px-4 py-2">InspireTalks</td>
-                                <td class="px-4 py-2">Motivation</td>
+                                <td class="px-4 py-2">002</td>
+                                <td class="px-4 py-2">Podcast B</td>
+                                <td class="px-4 py-2">Channel B</td>
+                                <td class="px-4 py-2">Komedi</td>
                                 <td class="px-4 py-2">2020</td>
                                 <td class="px-4 py-2 flex space-x-2">
-                                    <button class="bg-yellow-500 text-white px-3 py-1 rounded hover:bg-yellow-600">Ubah</button>
+                                    <button class="bg-yellow-500 text-white px-3 py-1 rounded hover:bg-yellow-600" onclick="openModal()">Ubah</button>
                                     <button class="bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700">Hapus</button>
                                 </td>
                             </tr>
-                            <!-- Data Podcast 7 -->
                             <tr class="hover:bg-gray-50">
-                                <td class="px-4 py-2">007</td>
-                                <td class="px-4 py-2">Tech Talks</td>
-                                <td class="px-4 py-2">Tech Channel</td>
-                                <td class="px-4 py-2">Technology</td>
-                                <td class="px-4 py-2">2024</td>
+                                <td class="px-4 py-2">003</td>
+                                <td class="px-4 py-2">Podcast C</td>
+                                <td class="px-4 py-2">Channel C</td>
+                                <td class="px-4 py-2">Drama</td>
+                                <td class="px-4 py-2">2019</td>
                                 <td class="px-4 py-2 flex space-x-2">
-                                    <button class="bg-yellow-500 text-white px-3 py-1 rounded hover:bg-yellow-600">Ubah</button>
+                                    <button class="bg-yellow-500 text-white px-3 py-1 rounded hover:bg-yellow-600" onclick="openModal()">Ubah</button>
                                     <button class="bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700">Hapus</button>
                                 </td>
                             </tr>
-                            <!-- Data Podcast 8 -->
+                            <!-- Add more data rows -->
                             <tr class="hover:bg-gray-50">
-                                <td class="px-4 py-2">008</td>
-                                <td class="px-4 py-2">Health Matters</td>
-                                <td class="px-4 py-2">Wellness</td>
-                                <td class="px-4 py-2">Health</td>
+                                <td class="px-4 py-2">004</td>
+                                <td class="px-4 py-2">Podcast D</td>
+                                <td class="px-4 py-2">Channel D</td>
+                                <td class="px-4 py-2">Teknologi</td>
                                 <td class="px-4 py-2">2023</td>
                                 <td class="px-4 py-2 flex space-x-2">
-                                    <button class="bg-yellow-500 text-white px-3 py-1 rounded hover:bg-yellow-600">Ubah</button>
+                                    <button class="bg-yellow-500 text-white px-3 py-1 rounded hover:bg-yellow-600" onclick="openModal()">Ubah</button>
                                     <button class="bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700">Hapus</button>
                                 </td>
                             </tr>
-                            <!-- Data Podcast 9 -->
                             <tr class="hover:bg-gray-50">
-                                <td class="px-4 py-2">009</td>
-                                <td class="px-4 py-2">Future Vision</td>
-                                <td class="px-4 py-2">Innovators</td>
-                                <td class="px-4 py-2">Innovation</td>
-                                <td class="px-4 py-2">2024</td>
-                                <td class="px-4 py-2 flex space-x-2">
-                                    <button class="bg-yellow-500 text-white px-3 py-1 rounded hover:bg-yellow-600">Ubah</button>
-                                    <button class="bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700">Hapus</button>
-                                </td>
-                            </tr>
-                            <!-- Data Podcast 10 -->
-                            <tr class="hover:bg-gray-50">
-                                <td class="px-4 py-2">010</td>
-                                <td class="px-4 py-2">Life Stories</td>
-                                <td class="px-4 py-2">Storytellers</td>
-                                <td class="px-4 py-2">Lifestyle</td>
+                                <td class="px-4 py-2">005</td>
+                                <td class="px-4 py-2">Podcast E</td>
+                                <td class="px-4 py-2">Channel E</td>
+                                <td class="px-4 py-2">Edukasi</td>
                                 <td class="px-4 py-2">2022</td>
                                 <td class="px-4 py-2 flex space-x-2">
-                                    <button class="bg-yellow-500 text-white px-3 py-1 rounded hover:bg-yellow-600">Ubah</button>
+                                    <button class="bg-yellow-500 text-white px-3 py-1 rounded hover:bg-yellow-600" onclick="openModal()">Ubah</button>
+                                    <button class="bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700">Hapus</button>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-4 py-2">006</td>
+                                <td class="px-4 py-2">Podcast F</td>
+                                <td class="px-4 py-2">Channel F</td>
+                                <td class="px-4 py-2">Kesehatan</td>
+                                <td class="px-4 py-2">2021</td>
+                                <td class="px-4 py-2 flex space-x-2">
+                                    <button class="bg-yellow-500 text-white px-3 py-1 rounded hover:bg-yellow-600" onclick="openModal()">Ubah</button>
+                                    <button class="bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700">Hapus</button>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-4 py-2">007</td>
+                                <td class="px-4 py-2">Podcast G</td>
+                                <td class="px-4 py-2">Channel G</td>
+                                <td class="px-4 py-2">Musik</td>
+                                <td class="px-4 py-2">2020</td>
+                                <td class="px-4 py-2 flex space-x-2">
+                                    <button class="bg-yellow-500 text-white px-3 py-1 rounded hover:bg-yellow-600" onclick="openModal()">Ubah</button>
+                                    <button class="bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700">Hapus</button>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-4 py-2">008</td>
+                                <td class="px-4 py-2">Podcast H</td>
+                                <td class="px-4 py-2">Channel H</td>
+                                <td class="px-4 py-2">Sejarah</td>
+                                <td class="px-4 py-2">2018</td>
+                                <td class="px-4 py-2 flex space-x-2">
+                                    <button class="bg-yellow-500 text-white px-3 py-1 rounded hover:bg-yellow-600" onclick="openModal()">Ubah</button>
+                                    <button class="bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700">Hapus</button>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-4 py-2">009</td>
+                                <td class="px-4 py-2">Podcast I</td>
+                                <td class="px-4 py-2">Channel I</td>
+                                <td class="px-4 py-2">Berita</td>
+                                <td class="px-4 py-2">2021</td>
+                                <td class="px-4 py-2 flex space-x-2">
+                                    <button class="bg-yellow-500 text-white px-3 py-1 rounded hover:bg-yellow-600" onclick="openModal()">Ubah</button>
+                                    <button class="bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700">Hapus</button>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-4 py-2">010</td>
+                                <td class="px-4 py-2">Podcast J</td>
+                                <td class="px-4 py-2">Channel J</td>
+                                <td class="px-4 py-2">Olahraga</td>
+                                <td class="px-4 py-2">2017</td>
+                                <td class="px-4 py-2 flex space-x-2">
+                                    <button class="bg-yellow-500 text-white px-3 py-1 rounded hover:bg-yellow-600" onclick="openModal()">Ubah</button>
                                     <button class="bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700">Hapus</button>
                                 </td>
                             </tr>
