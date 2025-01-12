@@ -66,8 +66,8 @@
                             </tr>
                         </thead>
                         <tbody id="tableBody" class="divide-y divide-gray-200">
-                            <!-- Data rows (example) -->
-                            <tr class="hover:bg-gray-50">
+                        <!-- Data rows (example) -->
+                        <tr class="hover:bg-gray-50">
                                 <td class="px-4 py-2">001</td>
                                 <td class="px-4 py-2">Admin@gmail.com</td>
                                 <td class="px-4 py-2">Admin123</td>
@@ -75,7 +75,7 @@
                                 <td class="px-4 py-2">Admin</td>
                                 <td class="px-4 py-2 flex space-x-2">
                                     <button class="bg-yellow-500 text-white px-3 py-1 rounded hover:bg-yellow-600" onclick="openModal()">Ubah</button>
-                                    <button class="bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700">Hapus</button>
+                                    <button class="bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700" onclick="openDeleteModal()">Hapus</button>
                                 </td>
                             </tr>
                             <!-- Add more data rows here -->
@@ -87,7 +87,7 @@
                                 <td class="px-4 py-2">User</td>
                                 <td class="px-4 py-2 flex space-x-2">
                                     <button class="bg-yellow-500 text-white px-3 py-1 rounded hover:bg-yellow-600" onclick="openModal()">Ubah</button>
-                                    <button class="bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700">Hapus</button>
+                                    <button class="bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700" onclick="openDeleteModal()">Hapus</button>
                                     <!-- Data rows (example) -->
                             <tr class="hover:bg-gray-50">
                                 <td class="px-4 py-2">001</td>
@@ -97,7 +97,7 @@
                                 <td class="px-4 py-2">Admin</td>
                                 <td class="px-4 py-2 flex space-x-2">
                                     <button class="bg-yellow-500 text-white px-3 py-1 rounded hover:bg-yellow-600" onclick="openModal()">Ubah</button>
-                                    <button class="bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700">Hapus</button>
+                                    <button class="bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700" onclick="openDeleteModal()">Hapus</button>
                                 </td>
                             </tr>
                             <!-- Add more data rows here -->
@@ -109,7 +109,7 @@
                                 <td class="px-4 py-2">User</td>
                                 <td class="px-4 py-2 flex space-x-2">
                                     <button class="bg-yellow-500 text-white px-3 py-1 rounded hover:bg-yellow-600" onclick="openModal()">Ubah</button>
-                                    <button class="bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700">Hapus</button>
+                                    <button class="bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700" onclick="openDeleteModal()">Hapus</button>
                                 <!-- Data rows (example) -->
                                 <tr class="hover:bg-gray-50">
                                 <td class="px-4 py-2">001</td>
@@ -119,7 +119,7 @@
                                 <td class="px-4 py-2">Admin</td>
                                 <td class="px-4 py-2 flex space-x-2">
                                     <button class="bg-yellow-500 text-white px-3 py-1 rounded hover:bg-yellow-600" onclick="openModal()">Ubah</button>
-                                    <button class="bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700">Hapus</button>
+                                    <button class="bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700" onclick="openDeleteModal()">Hapus</button>
                                 </td>
                             </tr>
                             <!-- Add more data rows here -->
@@ -131,7 +131,7 @@
                                 <td class="px-4 py-2">User</td>
                                 <td class="px-4 py-2 flex space-x-2">
                                     <button class="bg-yellow-500 text-white px-3 py-1 rounded hover:bg-yellow-600" onclick="openModal()">Ubah</button>
-                                    <button class="bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700">Hapus</button>
+                                    <button class="bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700" onclick="openDeleteModal()">Hapus</button>
                                     <!-- Data rows (example) -->
                             <tr class="hover:bg-gray-50">
                                 <td class="px-4 py-2">001</td>
@@ -141,7 +141,7 @@
                                 <td class="px-4 py-2">Admin</td>
                                 <td class="px-4 py-2 flex space-x-2">
                                     <button class="bg-yellow-500 text-white px-3 py-1 rounded hover:bg-yellow-600" onclick="openModal()">Ubah</button>
-                                    <button class="bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700">Hapus</button>
+                                    <button class="bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700" onclick="openDeleteModal()">Hapus</button>
                                 </td>
                             </tr>
                             <!-- Add more data rows here -->
@@ -153,7 +153,7 @@
                                 <td class="px-4 py-2">User</td>
                                 <td class="px-4 py-2 flex space-x-2">
                                     <button class="bg-yellow-500 text-white px-3 py-1 rounded hover:bg-yellow-600" onclick="openModal()">Ubah</button>
-                                    <button class="bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700">Hapus</button>
+                                    <button class="bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700" onclick="openDeleteModal()">Hapus</button>
                                     <tr class="hover:bg-gray-50">
                                 <td class="px-4 py-2">001</td>
                                 <td class="px-4 py-2">Admin@gmail.com</td>
@@ -162,7 +162,7 @@
                                 <td class="px-4 py-2">Admin</td>
                                 <td class="px-4 py-2 flex space-x-2">
                                     <button class="bg-yellow-500 text-white px-3 py-1 rounded hover:bg-yellow-600" onclick="openModal()">Ubah</button>
-                                    <button class="bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700">Hapus</button>
+                                    <button class="bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700" onclick="openDeleteModal()">Hapus</button>
                                 </td>
                             </tr>
                             <!-- Add more data rows here -->
@@ -174,7 +174,7 @@
                                 <td class="px-4 py-2">User</td>
                                 <td class="px-4 py-2 flex space-x-2">
                                     <button class="bg-yellow-500 text-white px-3 py-1 rounded hover:bg-yellow-600" onclick="openModal()">Ubah</button>
-                                    <button class="bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700">Hapus</button>
+                                    <button class="bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700" onclick="openDeleteModal()">Hapus</button>
                                     <!-- Data rows (example) -->
                             <tr class="hover:bg-gray-50">
                                 <td class="px-4 py-2">001</td>
@@ -184,7 +184,7 @@
                                 <td class="px-4 py-2">Admin</td>
                                 <td class="px-4 py-2 flex space-x-2">
                                     <button class="bg-yellow-500 text-white px-3 py-1 rounded hover:bg-yellow-600" onclick="openModal()">Ubah</button>
-                                    <button class="bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700">Hapus</button>
+                                    <button class="bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700" onclick="openDeleteModal()">Hapus</button>
                                 </td>
                             </tr>
                             <!-- Add more data rows here -->
@@ -196,15 +196,12 @@
                                 <td class="px-4 py-2">User</td>
                                 <td class="px-4 py-2 flex space-x-2">
                                     <button class="bg-yellow-500 text-white px-3 py-1 rounded hover:bg-yellow-600" onclick="openModal()">Ubah</button>
-                                    <button class="bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700">Hapus</button>
+                                    <button class="bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700" onclick="openDeleteModal()">Hapus</button>
                                 </td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
-
-                <!-- Pagination -->
-              
             </main>
 
             <footer class="bg-gray-800 text-white text-center py-4 mt-6">
@@ -213,7 +210,7 @@
         </div>
     </div>
 
-    <!-- Modal -->
+    <!-- Edit Modal -->
     <div id="editModal" class="fixed inset-0 bg-gray-600 bg-opacity-50 hidden justify-center items-center z-50">
         <div class="bg-white rounded-lg shadow-lg p-6 w-1/3">
             <h2 class="text-xl font-semibold mb-4">Edit Data User</h2>
@@ -228,7 +225,7 @@
                 </div>
                 <div class="mb-4">
                     <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
-                    <input type="pasword" id="pasword" value="john123" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+                    <input type="password" id="password" value="john123" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
                 </div>
                 <div class="mb-4">
                     <label for="role" class="block text-sm font-medium text-gray-700">Role</label>
@@ -245,6 +242,18 @@
         </div>
     </div>
 
+    <!-- Delete Confirmation Modal -->
+    <div id="deleteModal" class="fixed inset-0 bg-gray-600 bg-opacity-50 hidden justify-center items-center z-50">
+        <div class="bg-white rounded-lg shadow-lg p-6 w-1/3">
+            <h2 class="text-xl font-semibold mb-4">Delete Confirmation</h2>
+            <p class="text-gray-700">Are you sure you want to delete this user?</p>
+            <div class="flex justify-end space-x-2 mt-4">
+                <button type="button" class="px-4 py-2 bg-gray-300 rounded hover:bg-gray-400" onclick="closeDeleteModal()">Cancel</button>
+                <button type="button" class="px-4 py-2 bg-red-600 text-white rounded hover:bg-red-700" onclick="deleteUser()">Delete</button>
+            </div>
+        </div>
+    </div>
+
     <script>
         function openModal() {
             document.getElementById('editModal').classList.remove('hidden');
@@ -254,6 +263,22 @@
         function closeModal() {
             document.getElementById('editModal').classList.remove('flex');
             document.getElementById('editModal').classList.add('hidden');
+        }
+
+        function openDeleteModal() {
+            document.getElementById('deleteModal').classList.remove('hidden');
+            document.getElementById('deleteModal').classList.add('flex');
+        }
+
+        function closeDeleteModal() {
+            document.getElementById('deleteModal').classList.remove('flex');
+            document.getElementById('deleteModal').classList.add('hidden');
+        }
+
+        function deleteUser() {
+            // Add logic to delete the user
+            alert('User deleted!');
+            closeDeleteModal();
         }
     </script>
 </body>
