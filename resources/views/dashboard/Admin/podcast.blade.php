@@ -74,8 +74,8 @@
                                 <td class="px-4 py-2">Horror</td>
                                 <td class="px-4 py-2">2021</td>
                                 <td class="px-4 py-2 flex space-x-2">
-                                    <button class="bg-yellow-500 text-white px-3 py-1 rounded hover:bg-yellow-600" onclick="openModal()">Ubah</button>
-                                    <button class="bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700">Hapus</button>
+                                    <button class="bg-yellow-500 text-white px-3 py-1 rounded hover:bg-yellow-600" onclick="openEditModal()">Ubah</button>
+                                    <button class="bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700" onclick="openDeleteModal()">Hapus</button>
                                 </td>
                             </tr>
                             <tr class="hover:bg-gray-50">
@@ -85,8 +85,8 @@
                                 <td class="px-4 py-2">Komedi</td>
                                 <td class="px-4 py-2">2020</td>
                                 <td class="px-4 py-2 flex space-x-2">
-                                    <button class="bg-yellow-500 text-white px-3 py-1 rounded hover:bg-yellow-600" onclick="openModal()">Ubah</button>
-                                    <button class="bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700">Hapus</button>
+                                     <button class="bg-yellow-500 text-white px-3 py-1 rounded hover:bg-yellow-600" onclick="openEditModal()">Ubah</button>
+                                    <button class="bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700" onclick="openDeleteModal()">Hapus</button>
                                 </td>
                             </tr>
                             <tr class="hover:bg-gray-50">
@@ -96,8 +96,8 @@
                                 <td class="px-4 py-2">Drama</td>
                                 <td class="px-4 py-2">2019</td>
                                 <td class="px-4 py-2 flex space-x-2">
-                                    <button class="bg-yellow-500 text-white px-3 py-1 rounded hover:bg-yellow-600" onclick="openModal()">Ubah</button>
-                                    <button class="bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700">Hapus</button>
+                                     <button class="bg-yellow-500 text-white px-3 py-1 rounded hover:bg-yellow-600" onclick="openEditModal()">Ubah</button>
+                                    <button class="bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700" onclick="openDeleteModal()">Hapus</button>
                                 </td>
                             </tr>
                             <!-- Add more data rows -->
@@ -108,8 +108,8 @@
                                 <td class="px-4 py-2">Teknologi</td>
                                 <td class="px-4 py-2">2023</td>
                                 <td class="px-4 py-2 flex space-x-2">
-                                    <button class="bg-yellow-500 text-white px-3 py-1 rounded hover:bg-yellow-600" onclick="openModal()">Ubah</button>
-                                    <button class="bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700">Hapus</button>
+                                     <button class="bg-yellow-500 text-white px-3 py-1 rounded hover:bg-yellow-600" onclick="openEditModal()">Ubah</button>
+                                    <button class="bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700" onclick="openDeleteModal()">Hapus</button>
                                 </td>
                             </tr>
                             <tr class="hover:bg-gray-50">
@@ -119,8 +119,8 @@
                                 <td class="px-4 py-2">Edukasi</td>
                                 <td class="px-4 py-2">2022</td>
                                 <td class="px-4 py-2 flex space-x-2">
-                                    <button class="bg-yellow-500 text-white px-3 py-1 rounded hover:bg-yellow-600" onclick="openModal()">Ubah</button>
-                                    <button class="bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700">Hapus</button>
+                                     <button class="bg-yellow-500 text-white px-3 py-1 rounded hover:bg-yellow-600" onclick="openEditModal()">Ubah</button>
+                                    <button class="bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700" onclick="openDeleteModal()">Hapus</button>
                                 </td>
                             </tr>
                             <tr class="hover:bg-gray-50">
@@ -130,8 +130,8 @@
                                 <td class="px-4 py-2">Kesehatan</td>
                                 <td class="px-4 py-2">2021</td>
                                 <td class="px-4 py-2 flex space-x-2">
-                                    <button class="bg-yellow-500 text-white px-3 py-1 rounded hover:bg-yellow-600" onclick="openModal()">Ubah</button>
-                                    <button class="bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700">Hapus</button>
+                                     <button class="bg-yellow-500 text-white px-3 py-1 rounded hover:bg-yellow-600" onclick="openEditModal()">Ubah</button>
+                                    <button class="bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700" onclick="openDeleteModal()">Hapus</button>
                                 </td>
                             </tr>
                             <tr class="hover:bg-gray-50">
@@ -141,8 +141,8 @@
                                 <td class="px-4 py-2">Musik</td>
                                 <td class="px-4 py-2">2020</td>
                                 <td class="px-4 py-2 flex space-x-2">
-                                    <button class="bg-yellow-500 text-white px-3 py-1 rounded hover:bg-yellow-600" onclick="openModal()">Ubah</button>
-                                    <button class="bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700">Hapus</button>
+                                     <button class="bg-yellow-500 text-white px-3 py-1 rounded hover:bg-yellow-600" onclick="openEditModal()">Ubah</button>
+                                    <button class="bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700" onclick="openDeleteModal()">Hapus</button>
                                 </td>
                             </tr>
                             <tr class="hover:bg-gray-50">
@@ -152,8 +152,8 @@
                                 <td class="px-4 py-2">Sejarah</td>
                                 <td class="px-4 py-2">2018</td>
                                 <td class="px-4 py-2 flex space-x-2">
-                                    <button class="bg-yellow-500 text-white px-3 py-1 rounded hover:bg-yellow-600" onclick="openModal()">Ubah</button>
-                                    <button class="bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700">Hapus</button>
+                                     <button class="bg-yellow-500 text-white px-3 py-1 rounded hover:bg-yellow-600" onclick="openEditModal()">Ubah</button>
+                                    <button class="bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700" onclick="openDeleteModal()">Hapus</button>
                                 </td>
                             </tr>
                             <tr class="hover:bg-gray-50">
@@ -163,8 +163,8 @@
                                 <td class="px-4 py-2">Berita</td>
                                 <td class="px-4 py-2">2021</td>
                                 <td class="px-4 py-2 flex space-x-2">
-                                    <button class="bg-yellow-500 text-white px-3 py-1 rounded hover:bg-yellow-600" onclick="openModal()">Ubah</button>
-                                    <button class="bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700">Hapus</button>
+                                     <button class="bg-yellow-500 text-white px-3 py-1 rounded hover:bg-yellow-600" onclick="openEditModal()">Ubah</button>
+                                    <button class="bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700" onclick="openDeleteModal()">Hapus</button>
                                 </td>
                             </tr>
                             <tr class="hover:bg-gray-50">
@@ -174,8 +174,8 @@
                                 <td class="px-4 py-2">Olahraga</td>
                                 <td class="px-4 py-2">2017</td>
                                 <td class="px-4 py-2 flex space-x-2">
-                                    <button class="bg-yellow-500 text-white px-3 py-1 rounded hover:bg-yellow-600" onclick="openModal()">Ubah</button>
-                                    <button class="bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700">Hapus</button>
+                                     <button class="bg-yellow-500 text-white px-3 py-1 rounded hover:bg-yellow-600" onclick="openEditModal()">Ubah</button>
+                                    <button class="bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700" onclick="openDeleteModal()">Hapus</button>
                                 </td>
                             </tr>
                         </tbody>
@@ -189,7 +189,7 @@
         </div>
     </div>
 
-    <!-- Modal -->
+    <!-- Modal Edit -->
     <div id="editModal" class="fixed inset-0 bg-gray-600 bg-opacity-50 hidden justify-center items-center z-50">
         <div class="bg-white rounded-lg shadow-lg p-6 w-1/3">
             <h2 class="text-xl font-semibold mb-4">Edit Data Podcast</h2>
@@ -211,22 +211,46 @@
                     <input type="text" id="tahun_rilis" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
                 </div>
                 <div class="flex justify-end space-x-2">
-                    <button type="button" class="px-4 py-2 bg-gray-300 rounded hover:bg-gray-400" onclick="closeModal()">Cancel</button>
+                    <button type="button" class="px-4 py-2 bg-gray-300 rounded hover:bg-gray-400" onclick="closeEditModal()">Cancel</button>
                     <button type="submit" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">Save</button>
                 </div>
             </form>
         </div>
     </div>
 
+    <!-- Modal Hapus -->
+    <div id="deleteModal" class="fixed inset-0 bg-gray-600 bg-opacity-50 hidden justify-center items-center z-50">
+        <div class="bg-white rounded-lg shadow-lg p-6 w-1/3">
+            <h2 class="text-xl font-semibold mb-4">Konfirmasi Hapus Podcast</h2>
+            <p>Apakah Anda yakin ingin menghapus podcast ini?</p>
+            <div class="flex justify-end space-x-2 mt-4">
+                <button type="button" class="px-4 py-2 bg-gray-300 rounded hover:bg-gray-400" onclick="closeDeleteModal()">Cancel</button>
+                <button type="button" class="px-4 py-2 bg-red-600 text-white rounded hover:bg-red-700">Hapus</button>
+            </div>
+        </div>
+    </div>
+
     <script>
-        function openModal() {
+        // Modal Edit
+        function openEditModal() {
             document.getElementById('editModal').classList.remove('hidden');
             document.getElementById('editModal').classList.add('flex');
         }
 
-        function closeModal() {
+        function closeEditModal() {
             document.getElementById('editModal').classList.remove('flex');
             document.getElementById('editModal').classList.add('hidden');
+        }
+
+        // Modal Hapus
+        function openDeleteModal() {
+            document.getElementById('deleteModal').classList.remove('hidden');
+            document.getElementById('deleteModal').classList.add('flex');
+        }
+
+        function closeDeleteModal() {
+            document.getElementById('deleteModal').classList.remove('flex');
+            document.getElementById('deleteModal').classList.add('hidden');
         }
     </script>
 </body>
