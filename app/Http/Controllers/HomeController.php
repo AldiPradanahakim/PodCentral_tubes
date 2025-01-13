@@ -39,7 +39,7 @@ class HomeController extends Controller
         // Ambil query pencarian dari parameter 'search'
         $search = $request->input('search');
 
-        $podcasts = Podcast::with('author')
+        $podcasts = Podcast::with('author', 'genre')
             ->where('nama', 'LIKE', "%$search%")
             ->orWhereHas('author', function ($query) use ($search) {
                 $query->where('nama', 'LIKE', "%$search%");

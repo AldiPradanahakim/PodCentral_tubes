@@ -69,7 +69,7 @@
                 </div>
     
                 <!-- Social Login Buttons -->
-                <div class="space-y-4">
+                {{-- <div class="space-y-4">
                     <!-- Google Button -->
                     <button class="w-full flex justify-center items-center bg-white text-gray-900 py-2 px-4 rounded-lg shadow-sm hover:bg-gray-200">
                         <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Google.png" class="w-5 h-5 mr-3" alt="Google Logo">
@@ -82,7 +82,7 @@
                         Continue with Facebook
                     </button>
     
-                </div>
+                </div> --}}
     
                 <p class="mt-8 text-center text-sm text-gray-500">
                     Sudah menjadi anggota?
