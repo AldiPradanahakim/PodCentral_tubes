@@ -2,14 +2,16 @@
 
 namespace App\View\Components;
 
-use Closure;
-use Illuminate\Contracts\View\View;
+use App\Models\Genre;
 use Illuminate\View\Component;
+use Illuminate\Support\Facades\Route;
 
 class Layout extends Component
 {
     /**
      * Create a new component instance.
+     *
+     * @return void
      */
     public function __construct()
     {
@@ -18,9 +20,13 @@ class Layout extends Component
 
     /**
      * Get the view / contents that represent the component.
+     *
+     * @return \Illuminate\Contracts\View\View|\Closure|string
      */
-    public function render(): View|Closure|string
+    public function render()
     {
-        return view('components.layout');
+        $genres = Genre::with('podcasts.author')->get();
+        $currentRoute = Route::currentRouteName();
+        return view('components.layout', compact('currentRoute', 'genres'));
     }
 }

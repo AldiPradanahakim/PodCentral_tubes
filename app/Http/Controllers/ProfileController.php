@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use App\Models\Podcast;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
@@ -21,8 +22,12 @@ class ProfileController extends Controller
         if (!$user) {
             abort(404);
         }
+        $podcasts = Podcast::with('author')
+            ->where('author_id', $user->id)
+            ->orderBy('release_date', 'desc')
+            ->get();
 
-        return view('profile.index', compact('user'));
+        return view('profile.index', compact('user', 'podcasts'));
     }
     public function updateProfilePicture(Request $request)
     {

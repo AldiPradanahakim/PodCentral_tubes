@@ -33,7 +33,7 @@
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                         <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zM12 14c-3.31 0-6 2.69-6 6v2h12v-2c0-3.31-2.69-6-6-6z"></path>
                     </svg>
-                    <span class="ml-3">Pengguna</span>
+                    <span class="ml-3">User</span>
                 </a>
             </nav>
             <!-- Footer -->
@@ -60,10 +60,13 @@
         <main class="flex-1 bg-gray-100 p-6 h-screen overflow-y-auto">
             <header class="mb-6">
                 <h1 class="text-2xl font-bold text-gray-700">Dashboard</h1>
+                <a href="{{ route('dashboard.pdf', ['sort' => request('sort'), 'direction' => request('direction'), 'sort_user' => request('sort_user'), 'direction_user' => request('direction_user')]) }}" class="inline-block bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-2 px-4 rounded mt-4">
+                    Download PDF
+                </a>
             </header>
 
             <!-- Statistik -->
-            <section class="grid grid-cols-4 gap-4 mb-8">
+            <section class="grid grid-cols-4 gap-4 mb-8 mta">
                 <div class="bg-white shadow-md rounded-lg p-4">
                     <h3 class="text-lg font-semibold text-gray-700">Total Podcasts</h3>
                     <p class="text-2xl font-bold text-indigo-500">{{ $totalPodcasts }}</p>
@@ -75,10 +78,6 @@
                 <div class="bg-white shadow-md rounded-lg p-4">
                     <h3 class="text-lg font-semibold text-gray-700">Total Genres</h3>
                     <p class="text-2xl font-bold text-indigo-500">{{ $totalGenres }}</p>
-                </div>
-                <div class="bg-white shadow-md rounded-lg p-4">
-                    <h3 class="text-lg font-semibold text-gray-700">Active Users (7 Days)</h3>
-                    <p class="text-2xl font-bold text-indigo-500">{{ $activeUsers }}</p>
                 </div>
             </section>
 

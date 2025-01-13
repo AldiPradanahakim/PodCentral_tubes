@@ -1,7 +1,7 @@
 <x-layout>
     <x-sidebar>
         
-        <div class="container overflow-y-auto px-6 py-8 bg-gray-800">
+        <div class="container overflow-y-auto px-6 py-8 bg-[#F5EFE7] ">
             <!-- Main Header -->
             <div class="flex items-center mb-6 py-4">
                  @if (isset($podcasts[0]))
@@ -9,22 +9,22 @@
                         alt="Profile Image" 
                         class="w-28 h-28 rounded-full shadow-lg object-cover">
                     <div class="ml-6 flex flex-col justify-center">
-                        <h1 class="text-3xl font-bold text-white">{{ $podcasts[0]->author->nama }}</h1>
+                        <h1 class="text-3xl font-bold text-[#213555]">{{ $podcasts[0]->author->nama }}</h1>
                     </div>
                 @else
                     <img src="{{ auth()->user()->image ? asset('storage/' . auth()->user()->image) : 'https://via.placeholder.com/112' }}" 
                         alt="Profile Image" 
                         class="w-28 h-28 rounded-full shadow-lg object-cover">
                     <div class="ml-6 flex flex-col justify-center">
-                        <h1 class="text-3xl font-bold text-white">{{ auth()->user()->nama }}</h1>
+                        <h1 class="text-3xl font-bold text-[#213555]">{{ auth()->user()->nama }}</h1>
                     </div>
                 @endif
                 
                 
             
-                <button class="ml-auto bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-6 rounded-full shadow-lg transition-all duration-200">
+                {{-- <button class="ml-auto bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-6 rounded-full shadow-lg transition-all duration-200">
                     Follow
-                </button>
+                </button> --}}
             </div>
             <!-- Main Content (Left: Cards, Right: About) -->
             <div class="flex gap-8">
@@ -33,8 +33,8 @@
                 <!-- Episode List -->
                 <div class="flex-1">
                     <div class="mb-6 flex justify-between items-center">
-                        <h2 class="text-2xl font-bold text-white">Semua Podcast</h2>
-                        <select class="bg-gray-700 text-white p-2 rounded-lg shadow-lg">
+                        <h2 class="text-2xl font-bold text-[#213555]">Semua Podcast</h2>
+                        <select class="bg-[#213555] text-white p-2 rounded-lg shadow-lg">
                             <option value="" disabled selected>Sort By</option>
                             <option value="newest">Newest to Oldest</option>
                             <option value="oldest">Oldest to Newest</option>
@@ -43,25 +43,16 @@
 
                     @foreach($podcasts as $podcast)
                     <a href="{{ route('podcast.show', $podcast->id) }}" class="block">
-                        <div class="bg-gray-800 rounded-lg shadow-lg p-6 flex mb-6 hover:bg-gray-700 transition-colors duration-200">
+                        <div class="bg-[#213555] rounded-lg shadow-lg p-6 flex mb-6 hover:bg-[#213555] transition-colors duration-200">
                             <img src="{{ $podcast->image ? asset('storage/' . $podcast->image) : 'https://via.placeholder.com/112' }}" 
                                 alt="Podcast Image" 
                                 class="w-32 h-32 rounded-lg shadow-lg object-cover">
                             <div class="ml-6 flex-1">
                                 <h3 class="text-xl font-semibold text-white">{{ $podcast->nama }}</h3>
-                                <p class="text-gray-400 text-sm">{{ $podcast->author->nama }}</p>
-                                <p class="text-gray-500 text-sm mt-2">{{ Str::limit($podcast->desc, 150) }}</p>
-                                <div class="mt-4 flex gap-4">
-                                    @if($podcast->files)
-                                    <button class="bg-green-500 hover:bg-green-600 text-white p-3 rounded-full shadow-lg transition-all duration-200">
-                                        <i class="fa fa-play text-xl"></i>
-                                    </button>
-                                    @endif
-                                    <button class="bg-gray-700 hover:bg-gray-600 text-white p-3 rounded-full shadow-lg transition-all duration-200">
-                                        <i class="fa fa-heart text-xl"></i>
-                                    </button>
-                                </div>
-                                <div class="mt-2 text-sm text-gray-400">
+                                <p class="text-white text-sm">{{ $podcast->author->nama }}</p>
+                                <p class="text-white text-sm mt-2">{{ Str::limit($podcast->desc, 150) }}</p>
+                                
+                                <div class="mt-2 text-sm text-white">
                                     <span>{{ $podcast->duration }} min • </span>
                                     <span>{{ $podcast->release_date ? date('d M Y', strtotime($podcast->release_date)) : 'No date' }}</span>
                                 </div>
@@ -71,22 +62,7 @@
                     @endforeach
                 </div>
 
-                {{-- <!-- Right Section: About -->
-                <div class="w-72 bg-gray-700 text-white rounded-lg p-6 shadow-lg">
-                    <h3 class="text-2xl font-semibold mb-4">About This Podcast</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        This is a brief description of the podcast, what it's about, and the people behind it. 
-                        This text can contain more information about the topics covered, the hosts, and the general theme of the podcast.
-                    </p>
-                    <div class="mt-6">
-                        <h4 class="text-xl font-semibold mb-2">Podcast Information</h4>
-                        <ul class="space-y-2 text-gray-300">
-                            <li>Episodes: 5</li>
-                            <li>Language: English</li>
-                            <li>Category: Technology</li>
-                        </ul>
-                    </div>
-                </div> --}}
+                
             </div>
         </div>
         

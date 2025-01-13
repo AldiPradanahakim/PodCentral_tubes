@@ -5,15 +5,13 @@ namespace App\Http\Controllers;
 use App\Models\Podcast;
 use App\Models\User;
 use App\Models\Genre;
-use App\Models\HistoryItem;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use Carbon\Carbon;
+use Barryvdh\DomPDF\Facade\Pdf;
 
-
-class DashboardController extends Controller
+class PDFReportController extends Controller
 {
-    public function index(Request $request)
+    public function generateDashboardReport(Request $request)
     {
         // Statistik
         $totalPodcasts = Podcast::count();
@@ -40,24 +38,20 @@ class DashboardController extends Controller
             ->get();
 
         // Data Podcast untuk Tabel (Pagination dan Sorting)
-        $perPage = 5;
         $sort = $request->input('sort', 'id');
         $direction = $request->input('direction', 'asc');
 
         $podcasts = Podcast::with('author')
             ->orderBy($sort, $direction)
-            ->paginate($perPage, ['*'], 'podcasts');
+            ->get();
 
         // User untuk table (Pagination dan sorting)
         $sort_user = $request->input('sort_user', 'id');
         $direction_user = $request->input('direction_user', 'asc');
 
         $users = User::orderBy($sort_user, $direction_user)
-            ->paginate($perPage, ['*'], 'users');
-
-
-
-        return view('dashboard.index', compact(
+            ->get();
+        $pdf = Pdf::loadView('pdf.dashboard_report', compact(
             'totalPodcasts',
             'totalUsers',
             'totalGenres',
@@ -67,5 +61,6 @@ class DashboardController extends Controller
             'podcasts',
             'users'
         ));
+        return $pdf->download('dashboard_report.pdf');
     }
 }

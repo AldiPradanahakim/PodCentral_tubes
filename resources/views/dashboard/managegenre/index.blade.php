@@ -41,7 +41,7 @@
                             d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zM12 14c-3.31 0-6 2.69-6 6v2h12v-2c0-3.31-2.69-6-6-6z">
                         </path>
                     </svg>
-                    <span class="ml-3">Pengguna</span>
+                    <span class="ml-3">User</span>
                 </a>
             </nav>
             <div class="px-6 py-4 border-t border-gray-700">

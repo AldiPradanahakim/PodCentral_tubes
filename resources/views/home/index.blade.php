@@ -1,48 +1,47 @@
 <x-layout>
     <x-sidebar>
-        <div class="flex-1 overflow-y-auto bg-gray-800 p-4">
+        <div class="flex-1 overflow-y-auto bg-[#F5EFE7] p-4">
             @foreach($genres as $genre)
-                <div class="bg-gray-800 shadow-md p-4 mb-6">
-                    <h2 class="text-2xl font-bold text-white mb-4 border-b border-gray-600 pb-2">{{ $genre->nama }}</h2>
-                    <!-- Grid Responsif -->
-                     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="podcastList-{{ $genre->id }}">
-                        @if(count($genre->podcasts) > 0)
-                            @foreach($genre->podcasts as $podcast)
-                                 <a href="{{ route('podcast.show', $podcast->id) }}" class="block">
-                                    <div class="podcast-card relative bg-gray-700 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-200 ease-in-out">
-                                        <div class="relative">
-                                            <img src="{{ $podcast->image ? asset('storage/' . $podcast->image) : 'https://via.placeholder.com/600x200' }}" alt="Thumbnail" class="w-full h-56 object-cover object-center">
-                                            <div class="absolute inset-0 bg-black opacity-10"></div>
-                                            <div class="absolute bottom-2 left-2 text-white">
-                                                <div class="flex items-center">
-                                                    <div class="w-8 h-8 flex-shrink-0">
-                                                        <img src="{{ $podcast->author->profile_image ? asset('storage/' . $podcast->author->profile_image) : 'https://via.placeholder.com/100'}}" alt="Profile Picture" class="w-full h-full rounded-full border-2 border-yellow-500 shadow-md object-cover">
-                                                    </div>
-                                                    <div class="ml-2 text-sm">
-                                                        <h3 class="font-bold truncate">{{ $podcast->nama }}</h3>
-                                                        <p class="text-gray-300 text-xs truncate mt-1">By: {{ $podcast->author->nama }}</p>
+                    <div class="bg-[#F5EFE7] shadow-md p-4 mb-6 rounded-lg">
+                        <h2 class="text-2xl font-bold text-black mb-4 border-b border-gray-600 pb-2">{{ $genre->nama }}</h2>
+                        <!-- Grid Responsif -->
+                         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="podcastList-{{ $genre->id }}">
+                            @if(count($genre->podcasts) > 0)
+                                @foreach($genre->podcasts as $podcast)
+                                     <a href="{{ route('podcast.show', $podcast->id) }}" class="block">
+                                        <div class="relative bg-[#213555] rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-200 ease-in-out">
+                                            <div class="relative">
+                                                <img src="{{ $podcast->image ? asset('storage/' . $podcast->image) : 'https://via.placeholder.com/600x200' }}" alt="Thumbnail" class="w-full h-56 object-cover object-center">
+                                                <div class="absolute inset-0 bg-black opacity-10"></div>
+                                                <div class="absolute bottom-2 left-2 text-white">
+                                                    <div class="flex items-center">
+                                                        <div class="w-8 h-8 flex-shrink-0">
+                                                            <img src="{{ $podcast->author->profile_image ? asset('storage/' . $podcast->author->profile_image) : 'https://via.placeholder.com/100'}}" alt="Profile Picture" class="w-full h-full rounded-full border-2 border-yellow-500 shadow-md object-cover">
+                                                        </div>
+                                                        <div class="ml-2 text-sm">
+                                                            <h3 class="font-bold truncate">{{ $podcast->nama }}</h3>
+                                                            <p class="text-gray-300 text-xs truncate mt-1">By: {{ $podcast->author->nama }}</p>
+                                                        </div>
                                                     </div>
                                                 </div>
+                                                 <audio src="{{ $podcast->files ? asset('storage/' . $podcast->files) : '' }}" class="podcast-audio hidden"></audio>
                                             </div>
-                                             <audio src="{{ $podcast->files ? asset('storage/' . $podcast->files) : '' }}" class="podcast-audio hidden"></audio>
+                                            <div class="p-4">
+                                                <p class="text-[#F5EFE7] text-sm truncate">{{ Str::limit($podcast->desc, 100) }}</p>
+                                                <p class="text-gray-500 text-xs mt-2">{{ $podcast->release_date }}</p>
+                                            </div>
                                         </div>
-                                        <div class="p-4">
-                                            <p class="text-gray-300 text-sm truncate">{{ Str::limit($podcast->desc, 100) }}</p>
-                                            <p class="text-gray-500 text-xs mt-2">{{ $podcast->release_date }}</p>
-                                        </div>
-
-                                    </div>
-                                </a>
-                            @endforeach
-                        @else
-                            <p class="text-white text-center">Tidak ada podcast untuk kategori ini.</p>
-                        @endif
+                                    </a>
+                                @endforeach
+                            @else
+                                <p class="text-white text-center">Tidak ada podcast untuk kategori ini.</p>
+                            @endif
+                        </div>
+                        <div id="loadingIndicator-{{ $genre->id }}" class="hidden text-white text-center mt-4">Loading...</div>
+                        <div id="noResultsMessage-{{ $genre->id }}" class="hidden text-white text-center mt-4">Tidak ada hasil pencarian.</div>
                     </div>
-                    <div id="loadingIndicator-{{ $genre->id }}" class="hidden text-white text-center mt-4">Loading...</div>
-                    <div id="noResultsMessage-{{ $genre->id }}" class="hidden text-white text-center mt-4">Tidak ada hasil pencarian.</div>
-                </div>
-            @endforeach
-        </div>
+                @endforeach
+            </div>
     </x-sidebar>
 
       <!-- Mini Audio Player -->
@@ -311,4 +310,5 @@
            }
         });
     </script>
+    
 </x-layout>
