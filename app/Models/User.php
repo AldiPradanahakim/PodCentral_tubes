@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\Relations\HasMany;
-use Illuminate\Database\Eloquent\Relations\HasOne;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class User extends Authenticatable
 {
@@ -17,53 +17,37 @@ class User extends Authenticatable
         'email',
         'password',
         'profile_image',
+        'role_id',  // Menambahkan role_id agar bisa diisi saat mass-assignment
     ];
 
-    //  Menentukan atribut yang boleh diisi
-    //   protected $fillable = [
-    //     'name',
-    //     'email',
-    //     'password',
-    //     'genres', 
-    //     'created_at',
-    //   ];
-
-    //  Menentukan atribut yang tidak boleh diisi
     protected $guarded = ['id'];
-
-    /**
-     * The attributes that should be hidden for serialization.
-     *
-     * @var list<string>
-     */
 
     protected $hidden = [
         'password',
         'remember_token',
     ];
 
-    /**
-     * Relasi dengan table podcast (One to Many)
-     */
+    // Relasi dengan table podcast (One to Many)
     public function podcasts(): HasMany
     {
         return $this->hasMany(Podcast::class, 'author_id');
     }
 
-
-    /**
-     * Get all collection for user
-     */
+    // Relasi dengan table collections (One to Many)
     public function collections(): HasMany
     {
         return $this->hasMany(Koleksi::class, 'id_user');
     }
 
-    /**
-     * Get all history for user
-     */
+    // Relasi dengan table histories (One to Many)
     public function histories(): HasMany
     {
         return $this->hasMany(History::class, 'id_user');
+    }
+
+    // Relasi dengan model Role (BelongsTo)
+    public function role(): BelongsTo
+    {
+        return $this->belongsTo(Role::class, 'Role_id');
     }
 }

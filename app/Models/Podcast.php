@@ -25,40 +25,30 @@ class Podcast extends Model
 
     protected $dates = ['release_date'];
 
-
-    /**
-     * Mendapatkan user yang memiliki podcast ini.
-     *
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
-     */
     public function author(): BelongsTo
     {
         return $this->belongsTo(User::class, 'author_id');
     }
 
-
-    /**
-     * Mendapatkan genre yang memiliki podcast ini.
-     *
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
-     */
     public function genre(): BelongsTo
     {
         return $this->belongsTo(Genre::class, 'id_genre');
     }
 
-    /**
-     * Relasi dengan table koleksi_item (One to Many)
-     */
     public function koleksi_items(): HasMany
     {
         return $this->hasMany(KoleksiItem::class, 'id_podcast');
     }
-    /**
-     * Relasi dengan table history_item (One to Many)
-     */
+
     public function history_items(): HasMany
     {
         return $this->hasMany(HistoryItem::class, 'id_podcast');
+    }
+
+    public function isInUserCollection($userId)
+    {
+        return KoleksiItem::whereHas('koleksi', function ($query) use ($userId) {
+            $query->where('id_user', $userId);
+        })->where('id_podcast', $this->id)->exists();
     }
 }

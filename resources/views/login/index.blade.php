@@ -28,9 +28,9 @@
             
     
             <!-- Login Header -->
-            <h2 class="text-3xl font-semibold text-center text-white mb-6">Log in to PodCentral</h2>
+            <h2 class="text-3xl font-semibold text-center text-white mb-6">Masuk PodCentral</h2>
     
-            <!-- Social Login Buttons -->
+            {{-- <!-- Social Login Buttons -->
             <div class="space-y-4">
                 <!-- Google Button -->
                 <button class="w-full flex justify-center items-center bg-white text-gray-900 py-2 px-4 rounded-lg shadow-sm hover:bg-gray-200">
@@ -44,10 +44,10 @@
                     Continue with Facebook
                 </button>
 
-            </div>
+            </div> --}}
     
             <!-- Email and Password Fields -->
-            <form action="/login" method="POST">
+            <form action="{{ route('login.submit') }}" method="POST">
                 @csrf
             <div class="mt-8 space-y-6">
                 <div>

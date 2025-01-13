@@ -4,13 +4,13 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateEpisodesTable extends Migration
+return new class extends Migration
 {
     public function up()
     {
         Schema::create('episodes', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('podcast_id')->constrained()->onDelete('cascade');
+            $table->foreignId('podcast_id')->unsigned()->onDelete('cascade');
             $table->string('title');
             $table->string('audio_file');
             $table->text('description')->nullable();
@@ -24,4 +24,4 @@ class CreateEpisodesTable extends Migration
     {
         Schema::dropIfExists('episodes');
     }
-}
+};

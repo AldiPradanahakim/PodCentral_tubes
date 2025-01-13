@@ -13,7 +13,7 @@ class Koleksi extends Model
 
     protected $table = 'koleksi';
     protected $fillable = [
-        'user_id',
+        'id_user',
     ];
 
 
